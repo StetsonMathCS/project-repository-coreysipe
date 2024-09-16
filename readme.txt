@@ -1,1 +1,1 @@
-***Welcome to Corey's senior project repository!***
+Welcome to Corey's senior project repository
