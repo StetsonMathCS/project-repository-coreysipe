@@ -22,13 +22,25 @@ function Page() {
               <ul>
                 <li>Language Select</li>
                 <ul>
-                  <li>Java</li>
-                  <li>JavaScript</li>
-                  <li>Python</li>
-                  <li>C++</li>
+                  <li>
+                    <button>C++</button>
+                  </li>
+                  <li>
+                    <button>Java</button>
+                  </li>
+                  <li>
+                    <button>JavaScript</button>
+                  </li>
+                  <li>
+                    <button>Python</button>
+                  </li>
                 </ul>
-                <li>Coding Practice</li>
-                <li>Learning Material</li>
+                <li>
+                  <button>Coding Practice</button>
+                </li>
+                <li>
+                  <button>Learning Material</button>
+                </li>
               </ul>
             </ul>
           </div>
