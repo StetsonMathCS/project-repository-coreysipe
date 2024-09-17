@@ -6,7 +6,7 @@ import "./styles.css";
 
 function Page() {
   const [currentLevel, setCurrentLevel] = useState(1);
-  const [code, setCode] = useState("<h1>Hello World!</h1>");
+  const [code, setCode] = useState("");
   const [output, setOutput] = useState("Hello World!");
   const [errors, setErrors] = useState([]);
 
@@ -16,14 +16,28 @@ function Page() {
     <Layout>
       <div className="container">
         <div className="row">
-          <div className="box1 col-md-3">
-            Java<br></br>
-            Python<br></br>
-            JavaScript<br></br>
-            C++<br></br>
+          <div className="navigation-menu box1 col-md-3">
+            <ul>
+              <li>First Function</li>
+              <ul>
+                <li>Language Select</li>
+                <ul>
+                  <li>Java</li>
+                  <li>JavaScript</li>
+                  <li>Python</li>
+                  <li>C++</li>
+                </ul>
+                <li>Coding Practice</li>
+                <li>Learning Material</li>
+              </ul>
+            </ul>
           </div>
           <div className="box2 col-md-6">
-            <textarea rows="5" cols="30" value={code}></textarea>
+            <textarea
+              rows="10"
+              cols="70"
+              placeholder=" Enter your code here..."
+            ></textarea>
           </div>
           <div className="box3 col-md-3">
             <h4>Level 1</h4>
