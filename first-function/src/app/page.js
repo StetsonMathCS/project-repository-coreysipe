@@ -28,8 +28,8 @@ function Page() {
           <div className="box3 col-md-3">
             <h4>Level 1</h4>
             <p>
-              Task:Create a basic HTML page that utilizes any size header saying
-              Hello World!
+              Task: Create a basic HTML page that utilizes any size header
+              saying Hello World!
             </p>
             <p>Hint: Don't forget to close your tags</p>
             <button>Submit</button>
