@@ -11,7 +11,7 @@ const Playground = ( {code}: PlaygroundProps) => {
 
     }
     return (
-        <Editor theme="vs-dark" height="90vh" defaultLanguage="javascript" defaultValue={code} onChange={handleOnChange} />
+        <Editor theme="vs-dark" height="100vh" defaultLanguage="javascript" defaultValue={code} onChange={handleOnChange} />
     )
 }
 

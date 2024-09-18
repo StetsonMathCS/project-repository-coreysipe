@@ -16,7 +16,7 @@ function Page() {
   return (
     <Layout>
       <div className="container-fluid d-flex flex-row min-vh-100">
-        <div className="navigation-menu col-md-3">
+        <div className="box1 navigation-menu col-md-2">
           <ul>
             <li>First Function</li>
             <ul>
@@ -32,19 +32,19 @@ function Page() {
             </ul>
           </ul>
         </div>
-        <div className="col-md-6 d-flex flex-row">
+        <div className="col-md-8 d-flex flex-row">
           <div className="col-md-6">
             <Playground />
           </div>
-          <div className="col-md-6">
+          <div className="box2 col-md-8">
             <div className="output">{output}</div>
           </div>
         </div>
-        <div className="col-md-3">
+        <div className="box3 col-md-2">
           <h4>Level 1</h4>
           <p>Task: Create a basic snippet of code that prints "Hello World!"</p>
           <p>Hint: Don't forget to close your tags</p>
-          <button>Submit</button>
+          <button>Run your code</button>
         </div>
       </div>
     </Layout>

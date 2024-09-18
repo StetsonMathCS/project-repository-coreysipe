@@ -17,6 +17,6 @@ body {
 
 .output {
   overflow-y: auto;
-  height: 100%; /* Or a specific height if needed */
+  height: 100%; 
 }
 
