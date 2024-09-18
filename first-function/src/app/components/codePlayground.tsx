@@ -7,8 +7,11 @@ interface PlaygroundProps {
 }
  
 const Playground = ( {code}: PlaygroundProps) => {
+    function handleOnChange(value?: string) {
+
+    }
     return (
-        <Editor theme="vs-light" height="90vh" defaultLanguage="javascript" defaultValue={code} />
+        <Editor theme="vs-dark" height="90vh" defaultLanguage="javascript" defaultValue={code} onChange={handleOnChange} />
     )
 }
 
