@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Layout from "./layout.js";
+import Playground from "./components/codePlayground.tsx";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles.css";
 
@@ -45,17 +46,12 @@ function Page() {
             </ul>
           </div>
           <div className="box2 col-md-6">
-            <textarea
-              rows="10"
-              cols="70"
-              placeholder=" Enter your code here..."
-            ></textarea>
+            <Playground/>
           </div>
           <div className="box3 col-md-3">
             <h4>Level 1</h4>
             <p>
-              Task: Create a basic HTML page that utilizes any size header
-              saying Hello World!
+              Task: Create a basic snippet of code that prints "Hello World!"
             </p>
             <p>Hint: Don't forget to close your tags</p>
             <button>Submit</button>
