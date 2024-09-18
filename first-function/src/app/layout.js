@@ -9,9 +9,8 @@ function Layout({ children }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <body className="min-vh-100">
-        <div>
-          {" "}
-           <main className="main">{children}</main>
+        <div className="container-fluid d-flex flex-column h-100">
+          <main className="main flex-grow-1">{children}</main>
         </div>
       </body>
     </html>

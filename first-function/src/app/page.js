@@ -12,9 +12,36 @@ function Page() {
   const [errors, setErrors] = useState([]);
   const [selectedLanguage, setSelectedLanguage] = useState("javascript"); 
 
+  const defaultCodeSnippets = {
+    javascript: `
+      console.log("A computer is an electronic device that can store, retrieve, and process data, and perform tasks according to a set of instructions.");
+    `,
+    cpp: `
+      #include <iostream>
 
+      using namespace std;
+
+      int main() {
+          cout << "A computer is an electronic device that can store, retrieve, and process data, and perform tasks according to a set of instructions.";
+          return 0;
+      }
+    `,
+    python: `
+      print("A computer is an electronic device that can store, retrieve, and process data, and perform tasks according to a set of instructions.")
+    `,
+    java: `
+  public class ComputerDefinition {
+      public static void main(String[] args) {
+          System.out.println("A computer is an electronic device that can store, retrieve, and process data, and perform tasks according to a set of instructions.");
+      }
+  }
+`
+  };
+  
   const handleLanguageChange = (language) => {
     setSelectedLanguage(language);
+    setCode(defaultCodeSnippets[language] || ""); 
+    console.log("Selected language:", selectedLanguage);
 
   };
 
