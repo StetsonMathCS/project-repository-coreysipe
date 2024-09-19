@@ -15,8 +15,15 @@ body {
   background-color: #b0b0b0; /* Dark gray */
 }
 
-.output {
-  overflow-y: auto;
-  height: 100%; 
+.footer {
+  background-color: #949494;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.output {
+  overflow-y: auto;
+  height: 100%;
+}
