@@ -1,9 +1,9 @@
 "use client";
 import React, { useState, useRef, useEffect } from "react";
-import Layout from "./layout.js";
-import CodeEditor from "./components/codePlayground.tsx";
+import Layout from "../layout.js";
+import CodeEditor from "../components/codePlayground.tsx";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./styles.css";
+import "../styles.css";
 
 function Page() {
   const [htmlCode, setHtmlCode] = useState(`
@@ -66,10 +66,10 @@ console.log('Hello from JavaScript!');
           <div className="row h-100 g-0">
             <div className="col-2">
               <h4>Language Select</h4>
-              <p><a href="/htmlEditor" className="btn btn-primary py-1">HTML</a></p>
-              <p><a href="/htmlCssEditor" className="btn btn-primary py-1">HTML & CSS</a></p>
-              <p><a href="#" className="btn btn-primary py-1">HTML, CSS & JavaScript</a></p>
-              <p><a href="/education" className="btn btn-primary py-1">Educational Content</a></p>
+              <p><a href="../htmlEditor" className="btn btn-primary py-1">HTML</a></p>
+              <p><a href="../htmlCssEditor" className="btn btn-primary py-1">HTML & CSS</a></p>
+              <p><a href="../" className="btn btn-primary py-1">HTML, CSS & JavaScript</a></p>
+              <p><a href="#" className="btn btn-primary py-1">Educational Content</a></p>
               <p><button className="btn btn-primary py-1" onClick={handleRunCode}>Run Code</button><br /></p>
             </div>
             <div className="col-10">
@@ -90,13 +90,6 @@ console.log('Hello from JavaScript!');
                 </div>
               </div>
               <div className="row h-50 g-0">
-                <div className="col-6">
-                  <CodeEditor 
-                    defaultValue={jsCode} 
-                    selectedLanguage="javascript" 
-                    onCodeChange={setJsCode}
-                  />
-                </div>
                 <div className="col-6">
                   <div className="output-panel">
                     <iframe 
