@@ -66,46 +66,50 @@ console.log('Hello from JavaScript!');
           <div className="row h-100 g-0">
             <div className="col-2">
               <h4>Language Select</h4>
-              <p><a href="#" className="btn btn-primary py-1">HTML</a></p>
-              <p><a href="../htmlCssEditor" className="btn btn-primary py-1">HTML & CSS</a></p>
-              <p><a href="../" className="btn btn-primary py-1">HTML, CSS & JavaScript</a></p>
-              <p><a href="../education" className="btn btn-primary py-1">Educational Content</a></p>
-              <p><button className="btn btn-primary py-1" onClick={handleRunCode}>Run Code</button><br /></p>
+              <p>
+                <a href="#" className="btn btn-primary py-1">
+                  HTML
+                </a>
+              </p>
+              <p>
+                <a href="../htmlCssEditor" className="btn btn-primary py-1">
+                  HTML & CSS
+                </a>
+              </p>
+              <p>
+                <a href="../" className="btn btn-primary py-1">
+                  HTML, CSS & JavaScript
+                </a>
+              </p>
+              <p>
+                <a href="../education" className="btn btn-primary py-1">
+                  Educational Content
+                </a>
+              </p>
+              <p>
+                <button
+                  className="btn btn-primary py-1"
+                  onClick={handleRunCode}
+                >
+                  Run Code
+                </button>
+                <br />
+              </p>
             </div>
-            <div className="col-10">
-              <div className="row h-50 g-0">
-                <div className="col-6">
-                  <CodeEditor 
-                    defaultValue={htmlCode} 
-                    selectedLanguage="html" 
-                    onCodeChange={setHtmlCode}
-                  />
-                </div>
-                <div className="col-6">
-                  <CodeEditor 
-                    defaultValue={cssCode} 
-                    selectedLanguage="css" 
-                    onCodeChange={setCssCode}
-                  />
-                </div>
-              </div>
-              <div className="row h-50 g-0">
-                <div className="col-6">
-                  <CodeEditor 
-                    defaultValue={jsCode} 
-                    selectedLanguage="javascript" 
-                    onCodeChange={setJsCode}
-                  />
-                </div>
-                <div className="col-6">
-                  <div className="output-panel">
-                    <iframe 
-                      ref={iframeRef} 
-                      className="box4 output" 
-                      style={{ width: "100%", height: "45vh", border: "none" }}
-                    />
-                  </div>
-                </div>
+            <div class="col-5 ">
+              <CodeEditor
+                defaultValue={htmlCode}
+                selectedLanguage="html"
+                onCodeChange={setHtmlCode}
+              />
+            </div>
+            <div class="col-5">
+              <div className="output-panel bg-primary">
+                <iframe
+                  ref={iframeRef}
+                  className="box4 output"
+                  style={{ width: "100%", height: "90vh", border: "none" }}
+                />
               </div>
             </div>
           </div>
@@ -114,7 +118,9 @@ console.log('Hello from JavaScript!');
       <footer className="footer">
         <p className="m-0 py-3">
           Designed & Developed by Corey Sipe. Have a suggestion or critique?
-          <a href="#"> Fill out a feedback form!</a>
+          <a href="#"> Fill out a feedback form! </a>
+          Just because the code can run doesn't mean it is the right way to do
+          something.
         </p>
       </footer>
     </Layout>

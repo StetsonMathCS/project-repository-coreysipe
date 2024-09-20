@@ -13,7 +13,7 @@ function Page() {
     <title>Code Playground</title>
   </head>
   <body>
-    <h1>Hello from HTML!</h1>
+    <h1>Hello from HTML & CSS!</h1>
   </body>
 </html>
   `);
@@ -25,17 +25,13 @@ body {
 }
   `);
 
-  const [jsCode, setJsCode] = useState(`
-console.log('Hello from JavaScript!');
-  `);
-
   const iframeRef = useRef(null);
 
   const handleRunCode = () => {
     const iframe = iframeRef.current;
     const document = iframe.contentDocument || iframe.contentWindow.document;
 
-    // Combine the HTML, CSS, and JavaScript code into a single string
+    // Combine the HTML, and CSS into one string
     const combinedCode = `
       <!DOCTYPE html>
       <html>
@@ -44,7 +40,6 @@ console.log('Hello from JavaScript!');
       </head>
       <body>
         ${htmlCode}
-        <script>${jsCode}<\/script>
       </body>
       </html>
     `;
@@ -66,39 +61,55 @@ console.log('Hello from JavaScript!');
           <div className="row h-100 g-0">
             <div className="col-2">
               <h4>Language Select</h4>
-              <p><a href="../htmlEditor" className="btn btn-primary py-1">HTML</a></p>
-              <p><a href="#" className="btn btn-primary py-1">HTML & CSS</a></p>
-              <p><a href="../" className="btn btn-primary py-1">HTML, CSS & JavaScript</a></p>
-              <p><a href="../education" className="btn btn-primary py-1">Educational Content</a></p>
-              <p><button className="btn btn-primary py-1" onClick={handleRunCode}>Run Code</button><br /></p>
+              <p>
+                <a href="../htmlEditor" className="btn btn-primary py-1">
+                  HTML
+                </a>
+              </p>
+              <p>
+                <a href="#" className="btn btn-primary py-1">
+                  HTML & CSS
+                </a>
+              </p>
+              <p>
+                <a href="../" className="btn btn-primary py-1">
+                  HTML, CSS & JavaScript
+                </a>
+              </p>
+              <p>
+                <a href="../education" className="btn btn-primary py-1">
+                  Educational Content
+                </a>
+              </p>
+              <p>
+                <button
+                  className="btn btn-primary py-1"
+                  onClick={handleRunCode}
+                >
+                  Run Code
+                </button>
+                <br />
+              </p>
             </div>
-            <div className="col-10">
-              <div className="row h-50 g-0">
-                <div className="col-6">
-                  <CodeEditor 
-                    defaultValue={htmlCode} 
-                    selectedLanguage="html" 
-                    onCodeChange={setHtmlCode}
-                  />
-                </div>
-                <div className="col-6">
-                  <CodeEditor 
-                    defaultValue={cssCode} 
-                    selectedLanguage="css" 
-                    onCodeChange={setCssCode}
-                  />
-                </div>
-              </div>
-              <div className="row h-50 g-0">
-                <div className="col-6">
-                  <div className="output-panel">
-                    <iframe 
-                      ref={iframeRef} 
-                      className="box4 output" 
-                      style={{ width: "100%", height: "45vh", border: "none" }}
-                    />
-                  </div>
-                </div>
+            <div class="col-5">
+              <CodeEditor
+                defaultValue={htmlCode}
+                selectedLanguage="html"
+                onCodeChange={setHtmlCode}
+              />
+              <CodeEditor
+                defaultValue={cssCode}
+                selectedLanguage="css"
+                onCodeChange={setCssCode}
+              />
+            </div>
+            <div class="col-5">
+              <div className="output-panel">
+                <iframe
+                  ref={iframeRef}
+                  className="box4 output"
+                  style={{ width: "100%", height: "45vh", border: "none" }}
+                />
               </div>
             </div>
           </div>
@@ -107,7 +118,9 @@ console.log('Hello from JavaScript!');
       <footer className="footer">
         <p className="m-0 py-3">
           Designed & Developed by Corey Sipe. Have a suggestion or critique?
-          <a href="#"> Fill out a feedback form!</a>
+          <a href="#"> Fill out a feedback form! </a>
+          Just because the code can run doesn't mean it is the right way to do
+          something.
         </p>
       </footer>
     </Layout>
