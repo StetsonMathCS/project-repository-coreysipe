@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Layout from "./layout.js";
 import CodeEditor from "./components/codePlayground.tsx";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -7,15 +7,7 @@ import "./styles.css";
 
 function Page() {
   const [htmlCode, setHtmlCode] = useState(`
-    <!DOCTYPE html>
-    <html>
-    <head>
-      <title>My Web Page</title>
-    </head>
-    <body>
-      <h1>Hello, World!</h1>
-    </body>
-    </html>
+    <h1>Hello, World!</h1>
   `);
 
   const [cssCode, setCssCode] = useState(`
@@ -29,10 +21,12 @@ function Page() {
     console.log('Hello from JavaScript!');
   `);
 
-  const [output, setOutput] = useState("");
   const iframeRef = useRef(null);
 
   const handleRunCode = () => {
+    const iframe = iframeRef.current;
+    const document = iframe.contentDocument || iframe.contentWindow.document;
+
     // Combine the HTML, CSS, and JavaScript code into a single string
     const combinedCode = `
       <!DOCTYPE html>
@@ -42,31 +36,20 @@ function Page() {
       </head>
       <body>
         ${htmlCode}
-        <script>${jsCode}</script>
+        <script>${jsCode}<\/script>
       </body>
       </html>
     `;
-  
-    // Get the iframe element
-    const iframe = iframeRef.current;
-    
-    // Set up the load event listener before changing the srcdoc
-    iframe.onload = () => {
-      try {
-        const outputElement = iframe.contentDocument.body;
-        if (outputElement) {
-          setOutput(outputElement.innerHTML);
-        } else {
-          setOutput("Error: Unable to access iframe content.");
-        }
-      } catch (error) {
-        setOutput(`Error: ${error.message}`);
-      }
-    };
-  
-    // Set the srcdoc to trigger the load event
-    iframe.srcdoc = combinedCode;
+
+    // Write the combined code to the iframe
+    document.open();
+    document.write(combinedCode);
+    document.close();
   };
+
+  useEffect(() => {
+    handleRunCode();
+  }, []);
 
   return (
     <Layout>
@@ -104,9 +87,13 @@ function Page() {
                     onCodeChange={setJsCode}
                   />
                 </div>
-                <div className="col-6 ">
+                <div className="col-6">
                   <div className="output-panel">
-                    <div className="box4 output">{output}</div>
+                    <iframe 
+                      ref={iframeRef} 
+                      className="box4 output" 
+                      style={{ width: "100%", height: "45vh", border: "none" }}
+                    />
                   </div>
                 </div>
               </div>
@@ -114,12 +101,6 @@ function Page() {
           </div>
         </div>
       </main>
-      <iframe 
-      ref={iframeRef} 
-      style={{display: 'none'}} 
-      sandbox="allow-scripts"
-      title="Code Output"
-    />
       <footer className="footer">
         <p className="m-0 py-3">
           Designed & Developed by Corey Sipe. Have a suggestion or critique?
