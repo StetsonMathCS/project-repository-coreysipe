@@ -7,18 +7,26 @@ import "./styles.css";
 
 function Page() {
   const [htmlCode, setHtmlCode] = useState(`
-    <h1>Hello, World!</h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Code Playground</title>
+  </head>
+  <body>
+    <h1>Hello from HTML!</h1>
+  </body>
+</html>
   `);
 
   const [cssCode, setCssCode] = useState(`
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-    }
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
   `);
 
   const [jsCode, setJsCode] = useState(`
-    console.log('Hello from JavaScript!');
+console.log('Hello from JavaScript!');
   `);
 
   const iframeRef = useRef(null);
