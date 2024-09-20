@@ -66,9 +66,11 @@ console.log('Hello from JavaScript!');
           <div className="row h-100 g-0">
             <div className="col-2">
               <h4>Language Select</h4>
-              <button className="py-1">Coding Levels</button>
-              <button className="py-1">Educational Content</button>
-              <button className="py-1" onClick={handleRunCode}>Run Code</button>
+              <p><button className="py-1">HTML</button><br /></p>
+              <p><button className="py-1">HTML & CSS</button><br /></p>
+              <p><button className="py-1">HTML, CSS & JavaScript</button><br /></p>
+              <p><button className="py-1">Educational Content</button><br /></p>
+              <p><button className="py-1" onClick={handleRunCode}>Run Code</button><br /></p>
             </div>
             <div className="col-10">
               <div className="row h-50 g-0">
