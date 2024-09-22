@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useRef, useEffect } from "react";
 import Layout from "../layout.js";
-import CodeEditor from "../components/codePlayground.tsx";
+import CodeEditor from "../components/codePlaygroundLg.tsx";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles.css";
 
@@ -104,7 +104,7 @@ console.log('Hello from JavaScript!');
               />
             </div>
             <div class="col-5">
-              <div className="output-panel bg-primary">
+              <div className="output-panel">
                 <iframe
                   ref={iframeRef}
                   className="box4 output"

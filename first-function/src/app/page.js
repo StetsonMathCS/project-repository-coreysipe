@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useRef, useEffect } from "react";
 import Layout from "./layout.js";
-import CodeEditor from "./components/codePlayground.tsx";
+import CodeEditor from "./components/codePlaygroundMd.tsx";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles.css";
 
