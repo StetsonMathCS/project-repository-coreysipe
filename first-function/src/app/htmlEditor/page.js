@@ -18,38 +18,16 @@ function Page() {
 </html>
   `);
 
-  const [cssCode, setCssCode] = useState(`
-body {
-  font-family: Arial, sans-serif;
-  text-align: center;
-}
-  `);
-
-  const [jsCode, setJsCode] = useState(`
-console.log('Hello from JavaScript!');
-  `);
-
   const iframeRef = useRef(null);
 
   const handleRunCode = () => {
     const iframe = iframeRef.current;
     const document = iframe.contentDocument || iframe.contentWindow.document;
 
-    // Combine the HTML, CSS, and JavaScript code into a single string
     const combinedCode = `
-      <!DOCTYPE html>
-      <html>
-      <head>
-        <style>${cssCode}</style>
-      </head>
-      <body>
         ${htmlCode}
-        <script>${jsCode}<\/script>
-      </body>
-      </html>
     `;
 
-    // Write the combined code to the iframe
     document.open();
     document.write(combinedCode);
     document.close();
@@ -61,68 +39,71 @@ console.log('Hello from JavaScript!');
 
   return (
     <Layout>
-      <main>
-        <div className="container-fluid g-0">
-          <div className="row h-100 g-0">
-            <div className="col-2">
-              <h4>Language Select</h4>
-              <p>
-                <a href="#" className="btn btn-primary py-1">
-                  HTML
-                </a>
-              </p>
-              <p>
-                <a href="../htmlCssEditor" className="btn btn-primary py-1">
-                  HTML & CSS
-                </a>
-              </p>
-              <p>
-                <a href="../" className="btn btn-primary py-1">
-                  HTML, CSS & JavaScript
-                </a>
-              </p>
-              <p>
-                <a href="../education" className="btn btn-primary py-1">
-                  Educational Content
-                </a>
-              </p>
-              <p>
-                <button
-                  className="btn btn-primary py-1"
-                  onClick={handleRunCode}
-                >
-                  Run Code
-                </button>
-                <br />
-              </p>
-            </div>
-            <div class="col-5 ">
-              <CodeEditor
-                defaultValue={htmlCode}
-                selectedLanguage="html"
-                onCodeChange={setHtmlCode}
-              />
-            </div>
-            <div class="col-5">
-              <div className="output-panel">
-                <iframe
-                  ref={iframeRef}
-                  className="box4 output"
-                  style={{ width: "100%", height: "90vh", border: "none" }}
+      <div className="d-flex flex-column vh-100">
+        <main className="flex-grow-1 overflow-hidden">
+          <div className="container-fluid h-100 g-0">
+            <div className="row h-100 g-0">
+              <div className="col-2 h-100 overflow-auto">
+                <h4 className="ms-1 me-1">Language Select</h4>
+                <p>
+                  <a href="#" className="btn btn-primary ms-1 me-1 py-1">
+                    HTML
+                  </a>
+                </p>
+                <p>
+                  <a
+                    href="../htmlCssEditor"
+                    className="btn btn-primary ms-1 me-1 py-1"
+                  >
+                    HTML & CSS
+                  </a>
+                </p>
+                <p>
+                  <a href="../" className="btn btn-primary ms-1 me-1 py-1">
+                    HTML, CSS & JavaScript
+                  </a>
+                </p>
+                <p>
+                  <a
+                    href="../education"
+                    className="btn btn-primary ms-1 me-1 py-1"
+                  >
+                    Educational Content
+                  </a>
+                </p>
+                <p>
+                  <button
+                    className="btn btn-primary ms-1 me-1 py-1"
+                    onClick={handleRunCode}
+                  >
+                    Run Code
+                  </button>
+                </p>
+              </div>
+              <div className="col-5 h-100">
+                <CodeEditor
+                  defaultValue={htmlCode}
+                  selectedLanguage="html"
+                  onCodeChange={setHtmlCode}
                 />
+              </div>
+              <div className="col-5 h-100">
+                <div className="output-panel h-100">
+                  <iframe ref={iframeRef} className="w-100 h-100 border-0" />
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </main>
-      <footer className="footer">
-        <p className="m-0 py-3">
-          Designed & Developed by Corey Sipe. Have a suggestion or critique?
-          <a href="#"> Fill out a feedback form! </a>
-          Just because the code can run doesn't mean it is the right way to do
-          something.
-        </p>
-      </footer>
+        </main>
+        <footer className="footer">
+          <p className="m-0 py-3">
+            Designed & Developed by Corey Sipe. Have a suggestion or critique?
+            <a href="#"> Fill out a feedback form! </a>
+            Just because the code can run doesn't mean it is the right way to do
+            something.
+          </p>
+        </footer>
+      </div>
     </Layout>
   );
 }

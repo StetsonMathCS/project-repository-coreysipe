@@ -65,30 +65,36 @@ console.log('Hello from JavaScript!');
         <div className="container-fluid g-0">
           <div className="row h-100 g-0">
             <div className="col-2">
-              <h4>Language Select</h4>
+              <h4 className="ms-1 me-1">Language Select</h4>
               <p>
-                <a href="/htmlEditor" className="btn btn-primary py-1">
+                <a
+                  href="/htmlEditor"
+                  className="btn btn-primary ms-1 me-1 py-1"
+                >
                   HTML
                 </a>
               </p>
               <p>
-                <a href="/htmlCssEditor" className="btn btn-primary py-1">
+                <a
+                  href="/htmlCssEditor"
+                  className="btn btn-primary ms-1 me-1 py-1"
+                >
                   HTML & CSS
                 </a>
               </p>
               <p>
-                <a href="#" className="btn btn-primary py-1">
+                <a href="#" className="btn btn-primary ms-1 me-1 py-1">
                   HTML, CSS & JavaScript
                 </a>
               </p>
               <p>
-                <a href="/education" className="btn btn-primary py-1">
+                <a href="/education" className="btn btn-primary ms-1 me-1 py-1">
                   Educational Content
                 </a>
               </p>
               <p>
                 <button
-                  className="btn btn-primary py-1"
+                  className="btn btn-primary ms-1 me-1 py-1"
                   onClick={handleRunCode}
                 >
                   Run Code
