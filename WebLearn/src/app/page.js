@@ -65,7 +65,8 @@ console.log('Hello from JavaScript!');
         <div className="container-fluid g-0">
           <div className="row h-100 g-0">
             <div className="col-2">
-              <h4 className="ms-1 me-1">Language Select</h4>
+            <h1 className="ms-1 me-1">WebLearn</h1>
+              <h2 className="ms-1 me-1">Practice Modes</h2>
               <p>
                 <a
                   href="/htmlEditor"
@@ -91,6 +92,14 @@ console.log('Hello from JavaScript!');
                 <a href="/education" className="btn btn-primary ms-1 me-1 py-1">
                   Educational Content
                 </a>
+              </p>
+              <h3 className="ms-1 me-1">Challenge #X:</h3>
+              <p className="ms-1 me-1">
+                  Create an HTML page that displays a list of your favorite movies. Each movie should have a title, a brief description, and a link to the movie's IMDB page. Make the background a color of your choice and log to the console a test message.
+              </p>
+              <h4 className="ms-1 me-1">Hint:</h4>
+              <p className="ms-1 me-1">
+                  Use the <code>&lt;ul&gt;</code> and <code>&lt;li&gt;</code> tags to create a list of movies. You can use the <code>&lt;a&gt;</code> tag to create a link to the IMDB pages.
               </p>
               <p>
                 <button
