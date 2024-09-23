@@ -15,11 +15,13 @@ body {
   background-color: #b0b0b0; /* Dark gray */
 }
 
-.carousel {
+.challenges-container {
+  padding-bottom: 1rem; 
+}
+
+.challenges-navigation {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 90vh;
+  margin-bottom: 1rem;
 }
 
 .footer {
