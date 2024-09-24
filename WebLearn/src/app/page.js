@@ -115,47 +115,36 @@ function Page() {
 
   return (
     <Layout>
-      <main>
-        <div className="container-fluid g-0">
+      <main className="vh-90">
+        <div className="container-fluid h-100 g-0">
           <div className="row h-100 g-0">
-            <div className="col-2 d-flex flex-column">
-              <div>
-                <h1 className="mx-2">WebLearn</h1>
-                <h2 className="mx-2">Practice Modes</h2>
-                <p>
-                  <a
-                    href="/htmlEditor"
-                    className="btn btn-secondary d-block mx-2 py-1 d-flex justify-content-center"
-                  >
-                    HTML
-                  </a>
-                </p>
-                <p>
-                  <a
-                    href="/htmlCssEditor"
-                    className="btn btn-secondary d-block mx-2 py-1 d-flex justify-content-center"
-                  >
-                    HTML & CSS
-                  </a>
-                </p>
-                <p>
-                  <a
-                    href="#"
-                    className="btn btn-secondary d-block mx-2 py-1 d-flex justify-content-center"
-                  >
-                    HTML, CSS & JavaScript
-                  </a>
-                </p>
-                <p>
-                  <a
-                    href="/education"
-                    className="btn btn-secondary d-block mx-2 py-1 d-flex justify-content-center"
-                  >
-                    Educational Content
-                  </a>
-                </p>
-              </div>
-              <div className="challenges-container mx-2 mt-auto">
+            <div className="col-2">
+              <h1 className="mx-2">WebLearn</h1>
+              {/* <h2 className="mx-2">Practice Modes</h2>
+              <p>
+                <a href="/htmlEditor" className="btn btn-secondary mx-2 py-1">
+                  HTML
+                </a>
+              </p>
+              <p>
+                <a
+                  href="/htmlCssEditor"
+                  className="btn btn-secondary mx-2 py-1"
+                >
+                  HTML & CSS
+                </a>
+              </p>
+              <p>
+                <a href="#" className="btn btn-secondary mx-2 py-1">
+                  HTML, CSS & JavaScript
+                </a>
+              </p>
+              <p>
+                <a href="/education" className="btn btn-secondary mx-2 py-1">
+                  Educational Content
+                </a>
+              </p>
+              <div className="challenges-container">
                 <div className="challenges-navigation">
                   <button
                     onClick={handlePrevChallenge}
@@ -182,10 +171,10 @@ function Page() {
                     Run Code
                   </button>
                 </p>
-              </div>
+              </div> */}
             </div>
             <div className="col-10">
-              <div className="row h-50 g-0">
+              <div className="row vh-45 g-0">
                 <div className="col-6">
                   <CodeEditor
                     defaultValue={htmlCode}
@@ -201,7 +190,7 @@ function Page() {
                   />
                 </div>
               </div>
-              <div className="row h-50 g-0">
+              <div className="row vh-45 g-0">
                 <div className="col-6">
                   <CodeEditor
                     defaultValue={jsCode}
@@ -223,7 +212,7 @@ function Page() {
           </div>
         </div>
       </main>
-      <footer className="footer">
+      <footer className="footer vh-10">
         <p className="m-0 py-3">
           Designed & Developed by Corey Sipe. Have a suggestion or critique?
           <a href="#"> Fill out a feedback form! </a>
