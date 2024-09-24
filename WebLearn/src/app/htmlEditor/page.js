@@ -2,21 +2,53 @@
 import React, { useState, useRef, useEffect } from "react";
 import Layout from "../layout.js";
 import CodeEditor from "../components/codePlaygroundLg.tsx";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles.css";
 
-function Page() {
-  const [htmlCode, setHtmlCode] = useState(`
+const challenges = [
+  {
+    id: 1,
+    title: "Header Sizing Practice with Paragraphs",
+    description:
+      "Create an HTML page utilizing two different header tags and two different paragraph tags. The headers should be different sizes and the paragraphs should have different text.",
+    hint: "Use the <h1>, <h2>, <p>, and <p> tags to create the headers and paragraphs.",
+    initialHtml: `
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Code Playground</title>
-  </head>
-  <body>
-    <h1>Hello from HTML!</h1>
-  </body>
+    <title>Header Sizing Practice</title>
+</head>
+<body>
+    <!-- Add your headers and paragraphs here -->
+</body>
 </html>
-  `);
+    `,
+  },
+  {
+    id: 2,
+    title: "Movie List Challenge",
+    description:
+      "Create an HTML page that displays a list of your favorite movies. Each movie should have a title, a brief description, and a link to the movie's IMDB page. Make the background a color of your choice and log to the console a test message.",
+    hint: "Use the <ul> and <li> tags to create a list of movies. You can use the <a> tag to create a link to the IMDB pages.",
+    initialHtml: `
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Favorite Movies</title>
+</head>
+<body>
+    <h1>My Favorite Movies</h1>
+    <!-- Add your movie list here -->
+</body>
+</html>
+    `,
+  },
+];
+
+function Page() {
+  const [currentChallengeIndex, setCurrentChallengeIndex] = useState(0);
+  const [htmlCode, setHtmlCode] = useState(challenges[0].initialHtml);
 
   const iframeRef = useRef(null);
 
@@ -37,48 +69,98 @@ function Page() {
     handleRunCode();
   }, []);
 
+  const handlePrevChallenge = () => {
+    setCurrentChallengeIndex((prevIndex) =>
+      prevIndex > 0 ? prevIndex - 1 : challenges.length - 1
+    );
+  };
+
+  const handleNextChallenge = () => {
+    setCurrentChallengeIndex((prevIndex) =>
+      prevIndex < challenges.length - 1 ? prevIndex + 1 : 0
+    );
+  };
+
+  useEffect(() => {
+    const currentChallenge = challenges[currentChallengeIndex];
+    setHtmlCode(currentChallenge.initialHtml);
+  }, [currentChallengeIndex]);
+
+  const currentChallenge = challenges[currentChallengeIndex];
+
   return (
     <Layout>
       <div className="d-flex flex-column vh-100">
         <main className="flex-grow-1 overflow-hidden">
           <div className="container-fluid h-100 g-0">
             <div className="row h-100 g-0">
-              <div className="col-2 h-100 overflow-auto">
-                <h4 className="ms-1 me-1">Language Select</h4>
-                <p>
-                  <a href="#" className="btn btn-primary ms-1 me-1 py-1">
-                    HTML
-                  </a>
-                </p>
-                <p>
-                  <a
-                    href="../htmlCssEditor"
-                    className="btn btn-primary ms-1 me-1 py-1"
-                  >
-                    HTML & CSS
-                  </a>
-                </p>
-                <p>
-                  <a href="../" className="btn btn-primary ms-1 me-1 py-1">
-                    HTML, CSS & JavaScript
-                  </a>
-                </p>
-                <p>
-                  <a
-                    href="../education"
-                    className="btn btn-primary ms-1 me-1 py-1"
-                  >
-                    Educational Content
-                  </a>
-                </p>
-                <p>
-                  <button
-                    className="btn btn-primary ms-1 me-1 py-1"
-                    onClick={handleRunCode}
-                  >
-                    Run Code
-                  </button>
-                </p>
+              <div className="col-2 d-flex flex-column">
+                <div>
+                  <h1 className="mx-2">WebLearn</h1>
+                  <h2 className="mx-2">Practice Modes</h2>
+                  <p>
+                    <a
+                      href="#"
+                      className="btn btn-secondary d-block mx-2 py-1 d-flex justify-content-center"
+                    >
+                      HTML
+                    </a>
+                  </p>
+                  <p>
+                    <a
+                      href="/htmlCssEditor"
+                      className="btn btn-secondary d-block mx-2 py-1 d-flex justify-content-center"
+                    >
+                      HTML & CSS
+                    </a>
+                  </p>
+                  <p>
+                    <a
+                      href="../"
+                      className="btn btn-secondary d-block mx-2 py-1 d-flex justify-content-center"
+                    >
+                      HTML, CSS & JavaScript
+                    </a>
+                  </p>
+                  <p>
+                    <a
+                      href="/education"
+                      className="btn btn-secondary d-block mx-2 py-1 d-flex justify-content-center"
+                    >
+                      Educational Content
+                    </a>
+                  </p>
+                </div>
+                <div className="challenges-container mx-2 mt-auto">
+                  <div className="challenges-navigation">
+                    <button
+                      onClick={handlePrevChallenge}
+                      className="btn btn-secondary me-2"
+                    >
+                      <ChevronLeft size={20} />
+                    </button>
+                    <button
+                      onClick={handleNextChallenge}
+                      className="btn btn-secondary"
+                    >
+                      <ChevronRight size={20} />
+                    </button>
+                  </div>
+                  <h3 className="ms-1 me-1">
+                    Challenge #{currentChallenge.id}:
+                  </h3>
+                  <p className="ms-1 me-1">{currentChallenge.description}</p>
+                  <h4 className="ms-1 me-1">Hint:</h4>
+                  <p className="ms-1 me-1">{currentChallenge.hint}</p>
+                  <p>
+                    <button
+                      className="btn btn-secondary d-block mx-2 py-1"
+                      onClick={handleRunCode}
+                    >
+                      Run Code
+                    </button>
+                  </p>
+                </div>
               </div>
               <div className="col-5 h-100">
                 <CodeEditor

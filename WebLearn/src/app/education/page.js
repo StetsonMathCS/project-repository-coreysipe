@@ -12,34 +12,43 @@ function Page() {
         <main className="flex-grow-1 overflow-auto">
           <div className="container-fluid h-100">
             <div className="row h-100">
-              <div className="col-2 h-100 overflow-auto">
-                <h4 className="ms-1 me-1">Language Select</h4>
-                <p>
-                  <a
-                    href="../htmlEditor"
-                    className="btn ms-1 me-1 btn-primary py-1"
-                  >
-                    HTML
-                  </a>
-                </p>
-                <p>
-                  <a
-                    href="../htmlCssEditor"
-                    className="btn ms-1 me-1 btn-primary py-1"
-                  >
-                    HTML & CSS
-                  </a>
-                </p>
-                <p>
-                  <a href="../" className="btn ms-1 me-1 btn-primary py-1">
-                    HTML, CSS & JavaScript
-                  </a>
-                </p>
-                <p>
-                  <a href="#" className="btn ms-1 me-1 btn-primary py-1">
-                    Educational Content
-                  </a>
-                </p>
+              <div className="col-2 d-flex flex-column">
+                <div>
+                  <h1 className="mx-2">WebLearn</h1>
+                  <h2 className="mx-2">Practice Modes</h2>
+                  <p>
+                    <a
+                      href="/htmlEditor"
+                      className="btn btn-secondary d-block mx-2 py-1 d-flex justify-content-center"
+                    >
+                      HTML
+                    </a>
+                  </p>
+                  <p>
+                    <a
+                      href="/htmlCssEditor"
+                      className="btn btn-secondary d-block mx-2 py-1 d-flex justify-content-center"
+                    >
+                      HTML & CSS
+                    </a>
+                  </p>
+                  <p>
+                    <a
+                      href="../"
+                      className="btn btn-secondary d-block mx-2 py-1 d-flex justify-content-center"
+                    >
+                      HTML, CSS & JavaScript
+                    </a>
+                  </p>
+                  <p>
+                    <a
+                      href="#"
+                      className="btn btn-secondary d-block mx-2 py-1 d-flex justify-content-center"
+                    >
+                      Educational Content
+                    </a>
+                  </p>
+                </div>
               </div>
               <div className="col-4 h-100 overflow-auto">
                 <p>
