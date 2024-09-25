@@ -10,6 +10,7 @@ const challenges = [
   {
     id: 1,
     title: "Movie List Challenge",
+    difficulty: "Complexity:  ★☆☆☆☆",
     description:
       "Create an HTML page that displays a list of your favorite movies. Each movie should have a title, a brief description, and a link to the movie's IMDB page. Make the background a color of your choice and log to the console a test message.",
     hint: "Use the <ul> and <li> tags to create a list of movies. You can use the <a> tag to create a link to the IMDB pages.",
@@ -38,6 +39,7 @@ console.log('Movie list loaded!');
   {
     id: 2,
     title: "Interactive Button Challenge",
+    difficulty: "Complexity:  ★★☆☆☆",
     description:
       "Create a button that changes color when clicked. Use HTML for the button structure, CSS for initial styling, and JavaScript to handle the click event and color change.",
     hint: "Use addEventListener in JavaScript to detect clicks on the button. You can change the button's style directly in the event handler.",
@@ -150,7 +152,7 @@ function Page() {
                   Educational Content
                 </a>
               </p>
-              <div className="challenges-container mx-2 mt-auto">
+              <div className="challenges-container ms-2">
                 <div className="challenges-navigation">
                   <button
                     onClick={handlePrevChallenge}
@@ -167,13 +169,14 @@ function Page() {
                 </div>
                 <h3>Challenge #{currentChallenge.id}:</h3>
                 <div style={{ height: "200px", overflow: "auto" }}>
+                  <p>{currentChallenge.difficulty}</p>
                   <p>{currentChallenge.description}</p>
                   <h4>Hint:</h4>
                   <p>{currentChallenge.hint}</p>
                 </div>
                 <p>
                   <button
-                    className="btn btn-secondary py-1 d-block w-100"
+                    className="btn btn-secondary d-block py-1"
                     onClick={handleRunCode}
                   >
                     Run Code
