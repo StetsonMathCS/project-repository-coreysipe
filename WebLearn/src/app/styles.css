@@ -10,3 +10,18 @@
   align-items: center;
   height: 10vh;
 }
+
+.code-editor-container {
+  position: relative;
+}
+
+.language-tab {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #00ff55;
+  padding: 4px 8px;
+  border-bottom-right-radius: 0.25rem;
+  z-index: 10;
+  font-size: 0.875rem;
+}

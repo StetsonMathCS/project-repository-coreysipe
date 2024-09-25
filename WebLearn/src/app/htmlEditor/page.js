@@ -94,70 +94,68 @@ function Page() {
         <main className="flex-grow-1 overflow-hidden">
           <div className="container-fluid h-100 g-0">
             <div className="row h-100 g-0">
-              <div className="col-2 d-flex flex-column">
-                <div>
-                  <h1 className="mx-2">WebLearn</h1>
-                  <h2 className="mx-2">Practice Modes</h2>
-                  <p>
-                    <a href="#" className="btn btn-secondary py-1 d-block mx-2">
-                      HTML
-                    </a>
-                  </p>
-                  <p>
-                    <a
-                      href="/htmlCssEditor"
-                      className="btn btn-secondary py-1 d-block mx-2"
-                    >
-                      HTML & CSS
-                    </a>
-                  </p>
-                  <p>
-                    <a
-                      href="../"
-                      className="btn btn-secondary py-1 d-block mx-2"
-                    >
-                      HTML, CSS & JavaScript
-                    </a>
-                  </p>
-                  <p>
-                    <a
-                      href="/education"
-                      className="btn btn-secondary py-1 d-block mx-2"
-                    >
-                      Educational Content
-                    </a>
-                  </p>
+            <div className="col-2">
+              <h1 className="mx-2">WebLearn</h1>
+              <h2 className="mx-2">Practice Modes</h2>
+              <p>
+                <a
+                  href="#"
+                  className="btn btn-secondary d-block mx-2 py-1"
+                >
+                  HTML
+                </a>
+              </p>
+              <p>
+                <a
+                  href="/htmlCssEditor"
+                  className="btn btn-secondary d-block mx-2 py-1"
+                >
+                  HTML & CSS
+                </a>
+              </p>
+              <p>
+                <a href="../" className="btn btn-secondary d-block mx-2 py-1">
+                  HTML, CSS & JavaScript
+                </a>
+              </p>
+              <p>
+                <a
+                  href="/education"
+                  className="btn btn-secondary d-block mx-2 py-1"
+                >
+                  Educational Content
+                </a>
+              </p>
+              <div className="challenges-container mx-2 mt-auto">
+                <div className="challenges-navigation">
+                  <button
+                    onClick={handlePrevChallenge}
+                    className="btn btn-secondary me-2"
+                  >
+                    <ChevronLeft size={20} />
+                  </button>
+                  <button
+                    onClick={handleNextChallenge}
+                    className="btn btn-secondary"
+                  >
+                    <ChevronRight size={20} />
+                  </button>
                 </div>
-                <div className="mx-2 mt-auto">
-                  <div>
-                    <button
-                      onClick={handlePrevChallenge}
-                      className="btn btn-secondary me-2"
-                    >
-                      <ChevronLeft size={20} />
-                    </button>
-                    <button
-                      onClick={handleNextChallenge}
-                      className="btn btn-secondary"
-                    >
-                      <ChevronRight size={20} />
-                    </button>
-                  </div>
-                  <h3>Challenge #{currentChallenge.id}:</h3>
-                  <div style={{ height: "200px", overflow: "auto" }}>
-                    <p>{currentChallenge.description}</p>
-                    <h4>Hint:</h4>
-                    <p>{currentChallenge.hint}</p>
-                  </div>
-                  <p>
-                    <button
-                      className="btn btn-secondary py-1 d-block w-100"
-                      onClick={handleRunCode}
-                    >
-                      Run Code
-                    </button>
-                  </p>
+                <h3>Challenge #{currentChallenge.id}:</h3>
+                <div style={{ height: "50%", overflow: "auto" }}>
+                  <p>{currentChallenge.description}</p>
+                  <h4>Hint:</h4>
+                  <p>{currentChallenge.hint}</p>
                 </div>
+                <p>
+                  <button
+                    className="btn btn-secondary py-1 d-block w-100"
+                    onClick={handleRunCode}
+                  >
+                    Run Code
+                  </button>
+                </p>
+              </div>
               </div>
               <div className="col-5 h-100">
                 <CodeEditor

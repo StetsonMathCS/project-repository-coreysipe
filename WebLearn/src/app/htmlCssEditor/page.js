@@ -18,9 +18,6 @@ const challenges = [
 <html>
 <head>
   <title>My Favorite Quote</title>
-  <style>
-    /* Add your CSS styles here */
-  </style>
 </head>
 <body>
   <h1>Insert your favorite quote here</h1>
@@ -42,9 +39,6 @@ const challenges = [
 <html>
 <head>
   <title>Product Card</title>
-  <style>
-    /* Add your CSS styles here */
-  </style>
 </head>
 <body>
   <div class="card">
@@ -114,37 +108,38 @@ function Page() {
       <main>
         <div className="container-fluid g-0">
           <div className="row h-100 g-0">
-            <div className="col-2 d-flex flex-column">
-              <div>
-                <h1 className="mx-2">WebLearn</h1>
-                <h2 className="mx-2">Practice Modes</h2>
-                <p>
-                  <a
-                    href="/htmlEditor"
-                    className="btn btn-secondary d-block mx-2 py-1"
-                  >
-                    HTML
-                  </a>
-                </p>
-                <p>
-                  <a href="#" className="btn btn-secondary d-block mx-2 py-1">
-                    HTML & CSS
-                  </a>
-                </p>
-                <p>
-                  <a href="../" className="btn btn-secondary d-block mx-2 py-1">
-                    HTML, CSS & JavaScript
-                  </a>
-                </p>
-                <p>
-                  <a
-                    href="/education"
-                    className="btn btn-secondary d-block mx-2 py-1"
-                  >
-                    Educational Content
-                  </a>
-                </p>
-              </div>
+          <div className="col-2">
+              <h1 className="mx-2">WebLearn</h1>
+              <h2 className="mx-2">Practice Modes</h2>
+              <p>
+                <a
+                  href="/htmlEditor"
+                  className="btn btn-secondary d-block mx-2 py-1"
+                >
+                  HTML
+                </a>
+              </p>
+              <p>
+                <a
+                  href="#"
+                  className="btn btn-secondary d-block mx-2 py-1"
+                >
+                  HTML & CSS
+                </a>
+              </p>
+              <p>
+                <a href="../" className="btn btn-secondary d-block mx-2 py-1">
+                  HTML, CSS & JavaScript
+                </a>
+              </p>
+              <p>
+                <a
+                  href="/education"
+                  className="btn btn-secondary d-block mx-2 py-1"
+                >
+                  Educational Content
+                </a>
+              </p>
               <div className="challenges-container mx-2 mt-auto">
                 <div className="challenges-navigation">
                   <button
@@ -161,7 +156,7 @@ function Page() {
                   </button>
                 </div>
                 <h3>Challenge #{currentChallenge.id}:</h3>
-                <div style={{ height: "200px", overflow: "auto" }}>
+                <div style={{ height: "50%", overflow: "auto" }}>
                   <p>{currentChallenge.description}</p>
                   <h4>Hint:</h4>
                   <p>{currentChallenge.hint}</p>

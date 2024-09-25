@@ -166,7 +166,7 @@ function Page() {
                   </button>
                 </div>
                 <h3>Challenge #{currentChallenge.id}:</h3>
-                <div style={{ height: "200px", overflow: "auto" }}>
+                <div style={{ height: "50%", overflow: "auto" }}>
                   <p>{currentChallenge.description}</p>
                   <h4>Hint:</h4>
                   <p>{currentChallenge.hint}</p>
