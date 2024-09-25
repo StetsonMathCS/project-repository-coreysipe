@@ -108,7 +108,7 @@ function Page() {
       <main>
         <div className="container-fluid g-0">
           <div className="row h-100 g-0">
-          <div className="col-2">
+            <div className="col-2">
               <h1 className="mx-2">WebLearn</h1>
               <h2 className="mx-2">Practice Modes</h2>
               <p>
@@ -120,10 +120,7 @@ function Page() {
                 </a>
               </p>
               <p>
-                <a
-                  href="#"
-                  className="btn btn-secondary d-block mx-2 py-1"
-                >
+                <a href="#" className="btn btn-secondary d-block mx-2 py-1">
                   HTML & CSS
                 </a>
               </p>
@@ -156,7 +153,7 @@ function Page() {
                   </button>
                 </div>
                 <h3>Challenge #{currentChallenge.id}:</h3>
-                <div style={{ height: "50%", overflow: "auto" }}>
+                <div style={{ height: "200px", overflow: "auto" }}>
                   <p>{currentChallenge.description}</p>
                   <h4>Hint:</h4>
                   <p>{currentChallenge.hint}</p>
