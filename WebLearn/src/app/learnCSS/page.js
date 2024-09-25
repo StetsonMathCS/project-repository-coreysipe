@@ -43,7 +43,33 @@ function Page() {
                 </a>
               </p>
             </div>
-            <div className="col-4 h-100 overflow-auto">
+            <div className="col-5 h-100 overflow-auto">
+              <p>
+                CSS (Cascading Style Sheets) is a stylesheet language used to
+                describe the presentation of a document written in HTML. CSS
+                describes how elements should be rendered on screen, on paper,
+                in speech, or on other media. It can control the layout of
+                multiple web pages all at once, making it easier to manage the
+                design and layout of a website.
+              </p>
+              <p>
+                To apply CSS to an HTML document, you use selectors to target
+                elements and declarations to define the style rules. Selectors
+                can target elements by type, class, ID, or other attributes, and
+                declarations specify the properties and values for the selected
+                elements. You can apply CSS inline, internally, or externally to
+                an HTML document.
+              </p>
+              <p>
+                CSS properties control the visual aspects of an element, such as
+                color, size, spacing, and more. You can use CSS to create
+                responsive designs, animations, transitions, and other effects
+                on a webpage. By separating the content (HTML) from the
+                presentation (CSS), you can easily update the design of a
+                website without changing the underlying structure.
+              </p>
+            </div>
+            <div className="col-5 h-100 overflow-auto">
               <p>
                 CSS (Cascading Style Sheets) is a stylesheet language used to
                 describe the presentation of a document written in HTML. CSS

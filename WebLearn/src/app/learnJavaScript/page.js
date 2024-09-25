@@ -43,7 +43,35 @@ function Page() {
                 </a>
               </p>
             </div>
-            <div className="col-4 h-100 overflow-auto">
+            <div className="col-5 h-100 overflow-auto">
+              <p>
+                JavaScript is a programming language that allows you to add
+                interactivity and dynamic behavior to web pages. It is commonly
+                used for client-side web development, where it runs directly in
+                the web browser and can manipulate the HTML and CSS of a
+                webpage.
+              </p>
+              <p>
+                To learn JavaScript, you can start by understanding the basics
+                of the language, such as variables, data types, operators, and
+                control flow. You can then explore more advanced concepts like
+                functions, objects, arrays, and DOM manipulation.
+              </p>
+              <p>
+                JavaScript can be used to create interactive forms, validate
+                user input, handle events, make AJAX requests, and much more. It
+                is also widely used in frameworks and libraries like React,
+                Angular, and Vue.js to build complex web applications.
+              </p>
+              <p>
+                To practice JavaScript, you can use online coding platforms,
+                such as CodePen or JSFiddle, or set up a local development
+                environment on your computer. There are also numerous tutorials,
+                courses, and resources available online to help you learn
+                JavaScript effectively.
+              </p>
+            </div>
+            <div className="col-5 h-100 overflow-auto">
               <p>
                 JavaScript is a programming language that allows you to add
                 interactivity and dynamic behavior to web pages. It is commonly
