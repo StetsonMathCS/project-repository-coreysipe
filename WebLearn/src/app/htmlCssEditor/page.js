@@ -10,6 +10,7 @@ const challenges = [
   {
     id: 1,
     title: "Create a Simple Web Page",
+    complexity: "Complexity:  ★☆☆☆☆",
     description:
       "Create a simple web page that displays your favorite quote. Use HTML to structure the page and CSS to style the text.",
     hint: "Use the <h1> tag to display the quote as the heading. You can use CSS to change the font, color, and alignment of the text.",
@@ -31,6 +32,7 @@ const challenges = [
   {
     id: 2,
     title: "Create a Simple Card",
+    complexity: "Complexity:  ★★☆☆☆",
     description:
       "Create a simple card that displays information about a fictional product. Use HTML to structure the card and CSS to style the elements.",
     hint: "Use <div> elements to create the card structure. You can use CSS to add borders, padding, and background color to the card.",
@@ -154,6 +156,7 @@ function Page() {
                 </div>
                 <h3>Challenge #{currentChallenge.id}:</h3>
                 <div style={{ height: "200px", overflow: "auto" }}>
+                  <p>{currentChallenge.complexity}</p>
                   <p>{currentChallenge.description}</p>
                   <h4>Hint:</h4>
                   <p>{currentChallenge.hint}</p>

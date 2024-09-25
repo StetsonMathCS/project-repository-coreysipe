@@ -10,6 +10,7 @@ const challenges = [
   {
     id: 1,
     title: "Header Sizing Practice with Paragraphs",
+    complexity: "Complexity:  ★☆☆☆☆",
     description:
       "Create an HTML page utilizing two different header tags and two different paragraph tags. The headers should be different sizes and the paragraphs should have different text.",
     hint: "Use the <h1>, <h2>, <p>, and <p> tags to create the headers and paragraphs.",
@@ -28,6 +29,7 @@ const challenges = [
   {
     id: 2,
     title: "Movie List Challenge",
+    complexity: "Complexity:  ★★☆☆☆",
     description:
       "Create an HTML page that displays a list of your favorite movies. Each movie should have a title, a brief description, and a link to the movie's IMDB page. Make the background a color of your choice and log to the console a test message.",
     hint: "Use the <ul> and <li> tags to create a list of movies. You can use the <a> tag to create a link to the IMDB pages.",
@@ -140,6 +142,7 @@ function Page() {
                   </div>
                   <h3>Challenge #{currentChallenge.id}:</h3>
                   <div style={{ height: "200px", overflow: "auto" }}>
+                    <p>{currentChallenge.complexity}</p>
                     <p>{currentChallenge.description}</p>
                     <h4>Hint:</h4>
                     <p>{currentChallenge.hint}</p>
