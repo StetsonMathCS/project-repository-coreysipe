@@ -19,7 +19,7 @@ function Page() {
                   <p>
                     <a
                       href="/htmlEditor"
-                      className="btn btn-secondary d-block mx-2 py-1 d-flex justify-content-center"
+                      className="btn btn-secondary py-1 d-block mx-2"
                     >
                       HTML
                     </a>
@@ -27,7 +27,7 @@ function Page() {
                   <p>
                     <a
                       href="/htmlCssEditor"
-                      className="btn btn-secondary d-block mx-2 py-1 d-flex justify-content-center"
+                      className="btn btn-secondary py-1 d-block mx-2"
                     >
                       HTML & CSS
                     </a>
@@ -35,16 +35,13 @@ function Page() {
                   <p>
                     <a
                       href="../"
-                      className="btn btn-secondary d-block mx-2 py-1 d-flex justify-content-center"
+                      className="btn btn-secondary py-1 d-block mx-2"
                     >
                       HTML, CSS & JavaScript
                     </a>
                   </p>
                   <p>
-                    <a
-                      href="#"
-                      className="btn btn-secondary d-block mx-2 py-1 d-flex justify-content-center"
-                    >
+                    <a href="#" className="btn btn-secondary py-1 d-block mx-2">
                       Educational Content
                     </a>
                   </p>

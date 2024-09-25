@@ -121,31 +121,25 @@ function Page() {
                 <p>
                   <a
                     href="/htmlEditor"
-                    className="btn btn-secondary d-block mx-2 py-1 d-flex justify-content-center"
+                    className="btn btn-secondary d-block mx-2 py-1"
                   >
                     HTML
                   </a>
                 </p>
                 <p>
-                  <a
-                    href="#"
-                    className="btn btn-secondary d-block mx-2 py-1 d-flex justify-content-center"
-                  >
+                  <a href="#" className="btn btn-secondary d-block mx-2 py-1">
                     HTML & CSS
                   </a>
                 </p>
                 <p>
-                  <a
-                    href="../"
-                    className="btn btn-secondary d-block mx-2 py-1 d-flex justify-content-center"
-                  >
+                  <a href="../" className="btn btn-secondary d-block mx-2 py-1">
                     HTML, CSS & JavaScript
                   </a>
                 </p>
                 <p>
                   <a
                     href="/education"
-                    className="btn btn-secondary d-block mx-2 py-1 d-flex justify-content-center"
+                    className="btn btn-secondary d-block mx-2 py-1"
                   >
                     Educational Content
                   </a>
@@ -166,13 +160,15 @@ function Page() {
                     <ChevronRight size={20} />
                   </button>
                 </div>
-                <h3 className="ms-1 me-1">Challenge #{currentChallenge.id}:</h3>
-                <p className="ms-1 me-1">{currentChallenge.description}</p>
-                <h4 className="ms-1 me-1">Hint:</h4>
-                <p className="ms-1 me-1">{currentChallenge.hint}</p>
+                <h3>Challenge #{currentChallenge.id}:</h3>
+                <div style={{ height: "200px", overflow: "auto" }}>
+                  <p>{currentChallenge.description}</p>
+                  <h4>Hint:</h4>
+                  <p>{currentChallenge.hint}</p>
+                </div>
                 <p>
                   <button
-                    className="btn btn-secondary d-block mx-2 py-1"
+                    className="btn btn-secondary py-1 d-block w-100"
                     onClick={handleRunCode}
                   >
                     Run Code

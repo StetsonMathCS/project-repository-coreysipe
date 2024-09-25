@@ -120,31 +120,37 @@ function Page() {
           <div className="row h-100 g-0">
             <div className="col-2">
               <h1 className="mx-2">WebLearn</h1>
-              {/* <h2 className="mx-2">Practice Modes</h2>
+              <h2 className="mx-2">Practice Modes</h2>
               <p>
-                <a href="/htmlEditor" className="btn btn-secondary mx-2 py-1">
+                <a
+                  href="/htmlEditor"
+                  className="btn btn-secondary d-block mx-2 py-1"
+                >
                   HTML
                 </a>
               </p>
               <p>
                 <a
                   href="/htmlCssEditor"
-                  className="btn btn-secondary mx-2 py-1"
+                  className="btn btn-secondary d-block mx-2 py-1"
                 >
                   HTML & CSS
                 </a>
               </p>
               <p>
-                <a href="#" className="btn btn-secondary mx-2 py-1">
+                <a href="#" className="btn btn-secondary d-block mx-2 py-1">
                   HTML, CSS & JavaScript
                 </a>
               </p>
               <p>
-                <a href="/education" className="btn btn-secondary mx-2 py-1">
+                <a
+                  href="/education"
+                  className="btn btn-secondary d-block mx-2 py-1"
+                >
                   Educational Content
                 </a>
               </p>
-              <div className="challenges-container">
+              <div className="challenges-container mx-2 mt-auto">
                 <div className="challenges-navigation">
                   <button
                     onClick={handlePrevChallenge}
@@ -159,19 +165,21 @@ function Page() {
                     <ChevronRight size={20} />
                   </button>
                 </div>
-                <h3 className="ms-1 me-1">Challenge #{currentChallenge.id}:</h3>
-                <p className="ms-1 me-1">{currentChallenge.description}</p>
-                <h4 className="ms-1 me-1">Hint:</h4>
-                <p className="ms-1 me-1">{currentChallenge.hint}</p>
+                <h3>Challenge #{currentChallenge.id}:</h3>
+                <div style={{ height: "200px", overflow: "auto" }}>
+                  <p>{currentChallenge.description}</p>
+                  <h4>Hint:</h4>
+                  <p>{currentChallenge.hint}</p>
+                </div>
                 <p>
                   <button
-                    className="btn btn-secondary d-block mx-2 py-1"
+                    className="btn btn-secondary py-1 d-block w-100"
                     onClick={handleRunCode}
                   >
                     Run Code
                   </button>
                 </p>
-              </div> */}
+              </div>
             </div>
             <div className="col-10">
               <div className="row vh-45 g-0">
