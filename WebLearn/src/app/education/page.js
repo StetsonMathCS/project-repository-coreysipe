@@ -31,10 +31,7 @@ function Page() {
                 </a>
               </p>
               <p>
-                <a
-                  href="/htmlCssJsEditor"
-                  className="btn btn-secondary d-block mx-2 py-1"
-                >
+                <a href="../" className="btn btn-secondary d-block mx-2 py-1">
                   HTML, CSS & JavaScript
                 </a>
               </p>
