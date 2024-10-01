@@ -8,7 +8,7 @@ import "../styles.css";
 const sections = [
   {
     id: 1,
-    title: "Introduction to HTML",
+    title: "HTML Structure and Content",
     content: `
       <p>What is HTML? HTML stands for Hyper Text Markup Language. Technically speaking, it is not a programming language. Regardless of this it is highly used today. Any webpage you see is using HTML. Even this one!</p>
       <p>To begin learning HTML you must understand the foundation and the structure of how an HTML file looks like. To create a html file you give the file an extension of .html or .htm (both work the same). The difference is non-existent between the two extensions. Earlier operating systems could not take four letter extensions which birthed .htm by cutting out the l.</p>
@@ -34,10 +34,9 @@ const sections = [
   },
   {
     id: 2,
-    title: "JavaScript Applications",
+    title: "Links and Lists",
     content: `
-      <p>JavaScript can be used to create interactive forms, validate user input, handle events, make AJAX requests, and much more. It is also widely used in frameworks and libraries like React, Angular, and Vue.js to build complex web applications.</p>
-      <p>To practice JavaScript, you can use online coding platforms, such as CodePen or JSFiddle, or set up a local development environment on your computer. There are also numerous tutorials, courses, and resources available online to help you learn JavaScript effectively.</p>
+    <p>Have you ever wondered how to create a bullet list or make a clickable piece of text to take you to a link of your choice on demand? It is actually quite simple!</p>
     `,
   },
   // Add more sections as needed
