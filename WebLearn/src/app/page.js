@@ -74,6 +74,7 @@ function Page() {
   const [jsCode, setJsCode] = useState(challenges[0].initialJs);
 
   const iframeRef = useRef(null);
+  const challengesContainerRef = useRef(null);
 
   const handleRunCode = () => {
     const iframe = iframeRef.current;
@@ -92,7 +93,20 @@ function Page() {
 
   useEffect(() => {
     handleRunCode();
+    adjustChallengesContainerHeight();
+    window.addEventListener('resize', adjustChallengesContainerHeight);
+    return () => window.removeEventListener('resize', adjustChallengesContainerHeight);
   }, []);
+
+  const adjustChallengesContainerHeight = () => {
+    if (challengesContainerRef.current) {
+      const windowHeight = window.innerHeight;
+      const containerTop = challengesContainerRef.current.offsetTop;
+      const footerHeight = windowHeight * 0.1; 
+      const newHeight = windowHeight - containerTop - footerHeight;
+      challengesContainerRef.current.style.height = `${newHeight}px`;
+    }
+  };
 
   const handlePrevChallenge = () => {
     setCurrentChallengeIndex((prevIndex) =>
@@ -118,83 +132,59 @@ function Page() {
   return (
     <Layout>
       <title>WebLearn HTML, CSS & JS</title>
-      <main className="vh-90">
-        <div className="container-fluid h-100 g-0">
+      <div className="d-flex flex-column vh-100">
+        <main className="flex-grow-1 overflow-hidden">
           <div className="row h-100 g-0">
-            <div className="col-2">
-              <h1 className="mx-2">WebLearn</h1>
-              <h2 className="mx-2">Practice Modes</h2>
-              <p>
-                <a
-                  href="/htmlEditor"
-                  className="btn btn-secondary d-block mx-2 py-1"
-                >
-                  HTML
-                </a>
-              </p>
-              <p>
-                <a
-                  href="/htmlCssEditor"
-                  className="btn btn-secondary d-block mx-2 py-1"
-                >
-                  HTML & CSS
-                </a>
-              </p>
-              <p>
-                <a href="#" className="btn btn-secondary d-block mx-2 py-1">
-                  HTML, CSS & JavaScript
-                </a>
-              </p>
-              <p>
-                <a
-                  href="/education"
-                  className="btn btn-secondary d-block mx-2 py-1"
-                >
-                  Educational Content
-                </a>
-              </p>
-              <div className="challenges-container mx-2 mt-auto">
+            <div className="col-2 d-flex flex-column">
+              <div>
+                <h1 className="mx-2">WebLearn</h1>
+                <h2 className="mx-2">Practice Modes</h2>
+                <p>
+                  <a href="/htmlEditor" className="btn btn-secondary d-block mx-2 py-1">HTML</a>
+                </p>
+                <p>
+                  <a href="/htmlCssEditor" className="btn btn-secondary d-block mx-2 py-1">HTML & CSS</a>
+                </p>
+                <p>
+                  <a href="#" className="btn btn-secondary d-block mx-2 py-1">HTML, CSS & JavaScript</a>
+                </p>
+                <p>
+                  <a href="/education" className="btn btn-secondary d-block mx-2 py-1">Educational Content</a>
+                </p>
+              </div>
+              <div className="challenges-container mx-2 flex-grow-1 d-flex flex-column" ref={challengesContainerRef}>
                 <div className="challenges-navigation">
-                  <button
-                    onClick={handlePrevChallenge}
-                    className="btn btn-secondary me-2"
-                  >
+                  <button onClick={handlePrevChallenge} className="btn btn-secondary me-2">
                     <ChevronLeft size={20} />
                   </button>
-                  <button
-                    onClick={handleNextChallenge}
-                    className="btn btn-secondary"
-                  >
+                  <button onClick={handleNextChallenge} className="btn btn-secondary">
                     <ChevronRight size={20} />
                   </button>
                 </div>
                 <h3>Challenge #{currentChallenge.id}:</h3>
-                <div style={{ height: "200px", overflow: "auto" }}>
+                <div className="flex-grow-1 overflow-auto">
                   <p>{currentChallenge.complexity}</p>
                   <p>{currentChallenge.description}</p>
                   <h4>Hint:</h4>
                   <p>{currentChallenge.hint}</p>
                 </div>
-                <p>
-                  <button
-                    className="btn btn-secondary py-1 d-block w-100"
-                    onClick={handleRunCode}
-                  >
+                <p className="mt-2">
+                  <button className="btn btn-secondary py-1 d-block w-100" onClick={handleRunCode}>
                     Run Code
                   </button>
                 </p>
               </div>
             </div>
-            <div className="col-10">
-              <div className="row vh-45 g-0">
-                <div className="col-6">
+            <div className="col-10 h-100">
+              <div className="row h-50 g-0">
+                <div className="col-6 h-100">
                   <CodeEditor
                     defaultValue={htmlCode}
                     selectedLanguage="html"
                     onCodeChange={setHtmlCode}
                   />
                 </div>
-                <div className="col-6">
+                <div className="col-6 h-100">
                   <CodeEditor
                     defaultValue={cssCode}
                     selectedLanguage="css"
@@ -202,36 +192,35 @@ function Page() {
                   />
                 </div>
               </div>
-              <div className="row vh-45 g-0">
-                <div className="col-6">
+              <div className="row h-50 g-0">
+                <div className="col-6 h-100">
                   <CodeEditor
                     defaultValue={jsCode}
                     selectedLanguage="javascript"
                     onCodeChange={setJsCode}
                   />
                 </div>
-                <div className="col-6">
-                  <div className="output-panel">
+                <div className="col-6 h-100">
+                  <div className="output-panel h-100">
                     <iframe
                       ref={iframeRef}
-                      className="box4 output"
-                      style={{ width: "100%", height: "45vh", border: "none" }}
+                      className="box4 output w-100 h-100"
+                      style={{ border: "none" }}
                     />
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </main>
-      <footer className="footer vh-10">
-        <p className="m-0 py-3">
-          Designed & Developed by Corey Sipe. Have a suggestion or critique?
-          <a href="#"> Fill out a feedback form! </a>
-          Just because the code can run doesn't mean it is the right way to do
-          something.
-        </p>
-      </footer>
+        </main>
+        <footer className="footer">
+          <p className="m-0 py-3">
+            Designed & Developed by Corey Sipe. Have a suggestion or critique?
+            <a href="#"> Fill out a feedback form! </a>
+            Just because the code can run doesn't mean it is the right way to do something.
+          </p>
+        </footer>
+      </div>
     </Layout>
   );
 }

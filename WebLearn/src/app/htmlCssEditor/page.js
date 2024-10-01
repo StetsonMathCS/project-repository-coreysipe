@@ -66,6 +66,7 @@ function Page() {
   const [cssCode, setCssCode] = useState(challenges[0].initialCss);
 
   const iframeRef = useRef(null);
+  const challengesContainerRef = useRef(null);
 
   const handleRunCode = () => {
     const iframe = iframeRef.current;
@@ -83,7 +84,20 @@ function Page() {
 
   useEffect(() => {
     handleRunCode();
+    adjustChallengesContainerHeight();
+    window.addEventListener('resize', adjustChallengesContainerHeight);
+    return () => window.removeEventListener('resize', adjustChallengesContainerHeight);
   }, []);
+
+  const adjustChallengesContainerHeight = () => {
+    if (challengesContainerRef.current) {
+      const windowHeight = window.innerHeight;
+      const containerTop = challengesContainerRef.current.offsetTop;
+      const footerHeight = windowHeight * 0.1; 
+      const newHeight = windowHeight - containerTop - footerHeight;
+      challengesContainerRef.current.style.height = `${newHeight}px`;
+    }
+  };
 
   const handlePrevChallenge = () => {
     setCurrentChallengeIndex((prevIndex) =>
@@ -140,33 +154,24 @@ function Page() {
                   Educational Content
                 </a>
               </p>
-              <div className="challenges-container mx-2 mt-auto">
+              <div className="challenges-container mx-2 flex-grow-1 d-flex flex-column" ref={challengesContainerRef}>
                 <div className="challenges-navigation">
-                  <button
-                    onClick={handlePrevChallenge}
-                    className="btn btn-secondary me-2"
-                  >
+                  <button onClick={handlePrevChallenge} className="btn btn-secondary me-2">
                     <ChevronLeft size={20} />
                   </button>
-                  <button
-                    onClick={handleNextChallenge}
-                    className="btn btn-secondary"
-                  >
+                  <button onClick={handleNextChallenge} className="btn btn-secondary">
                     <ChevronRight size={20} />
                   </button>
                 </div>
                 <h3>Challenge #{currentChallenge.id}:</h3>
-                <div style={{ height: "200px", overflow: "auto" }}>
+                <div className="flex-grow-1 overflow-auto">
                   <p>{currentChallenge.complexity}</p>
                   <p>{currentChallenge.description}</p>
                   <h4>Hint:</h4>
                   <p>{currentChallenge.hint}</p>
                 </div>
-                <p>
-                  <button
-                    className="btn btn-secondary py-1 d-block w-100"
-                    onClick={handleRunCode}
-                  >
+                <p className="mt-2">
+                  <button className="btn btn-secondary py-1 d-block w-100" onClick={handleRunCode}>
                     Run Code
                   </button>
                 </p>
