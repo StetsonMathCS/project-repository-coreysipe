@@ -44,6 +44,7 @@ function Page() {
 
   return (
     <Layout>
+      <title>WebLearn CSS Education</title>
       <div className="d-flex flex-column vh-100">
         <main className="flex-grow-1 overflow-hidden">
           <div className="container-fluid h-100 g-0">

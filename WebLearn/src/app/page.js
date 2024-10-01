@@ -117,6 +117,7 @@ function Page() {
 
   return (
     <Layout>
+      <title>WebLearn HTML, CSS & JS</title>
       <main className="vh-90">
         <div className="container-fluid h-100 g-0">
           <div className="row h-100 g-0">
