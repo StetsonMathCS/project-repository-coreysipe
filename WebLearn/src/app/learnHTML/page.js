@@ -7,7 +7,6 @@ import "../styles.css";
 
 const sections = [
   {
-
     // Paragraph tags are on single lines to create less lines and a smaller file size. Loads the page a little faster. This matters on larger scale websites like stetson.edu
 
     id: 1,
@@ -148,10 +147,11 @@ function Page() {
                   <h3>Section #{currentSection.id}:</h3>
                   <h4>{currentSection.title}</h4>
                   <p>
-                    This introductory section will start you off with the
-                    foundations of HTML and prepare you for the challenges
-                    utilizing the HTML editor in the left hand navigational
-                    menu.
+                    Use the navigational arrows above to traverse between
+                    content sections. Each section will provide you with
+                    information on how to use different parts of HTML and each
+                    section has one practice challenge relavent to it in the
+                    HTML playground via the lefthand navigational menu.
                   </p>
                   <p>
                     <br />
