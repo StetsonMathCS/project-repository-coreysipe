@@ -131,7 +131,7 @@ function Page() {
               </div>
               <div className="col-2">
                 <div className="challenges-container mx-2 mt-auto">
-                  <div className="challenges-navigation">
+                  <div className="mt-2 challenges-navigation">
                     <button
                       onClick={handlePrevSection}
                       className="btn btn-secondary me-2"
