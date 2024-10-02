@@ -7,6 +7,9 @@ import "../styles.css";
 
 const sections = [
   {
+
+    // Paragraph tags are on single lines to create less lines and a smaller file size. Loads the page a little faster. This matters on larger scale websites like stetson.edu
+
     id: 1,
     title: "HTML Structure and Content",
     content: `
@@ -37,6 +40,28 @@ const sections = [
     title: "Links and Lists",
     content: `
     <p>Have you ever wondered how to create a bullet list or make a clickable piece of text to take you to a link of your choice on demand? It is actually quite simple!</p>
+    <p>In HTML, there are two primary types of lists: ordered lists (&lt;ol&gt;) and unordered lists (&lt;ul&gt;). Each serves a different purpose and is used to display items in a specific format.</p>
+    <p>An ordered list is used when the order of the items is important. Each item in the list is numbered automatically by the browser. This is useful for instructions, steps, or any content where the sequence matters. Here is an example of an ordered list:</p>
+    <p>
+    &lt;ol&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Preheat the oven to 350°F.&lt;/li&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Mix the ingredients.&lt;/li&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Bake for 30 minutes.&lt;/li&gt;<br>
+    &lt;/ol&gt;
+    </p>
+    <p>An unordered list is used when the order of the items does not matter. Each item in the list is marked with a bullet point. This is useful for lists where the sequence is not important, such as a list of features or a grocery list. Here is an example of an unordered list:</p>
+    <p>
+    &lt;ul&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Apples&lt;/li&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Bananas&lt;/li&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Cherries&lt;/li&gt;<br>
+    &lt;/ul&gt;
+    </p>
+    <p>Moving onto links, links are an essential part of the web. They allow users to navigate between pages, view related content, and access external resources. In HTML, links are created using the &lt;a&gt; tag, which stands for anchor. The &lt;a&gt; tag is used to create hyperlinks, or clickable text or images that direct users to another webpage or resource. <a href="https://www.youtube.com/watch?v=J---aiyznGQ" rel="noreferrer" target="_blank"> Here is an example of a link will take you to another page.</a> There are a few different attributes you give to making links. To make the hyperlink itself you need to give the attribute href="your_link_here" and if you want it to open a new tab an additional attribute of target="_blank". A blank target will stop the redirect from happening in the same tab which is useful for if you want users to not leave your website on accident and rather they close the new tab once they are finished with it. Another attribute that can be useful for security purposes is adding the relation attribute with "noreferrer" so like so: rel="noreferrer". Noreferrer stops linked website owners from seeing the origin of traffic you send to their website and plays a crucial role in protecting your site from reverse tabnabbing. Tabnabbing is a type of phishing attack that exploits the behavior of web browsers to trick users into revealing sensitive information. To learn more about tabnabbing view <a href="https://owasp.org/www-community/attacks/Reverse_Tabnabbing" rel=""noreferrer"" target="_blank">OWASP's definition of tabnabbing</a>. For the practice challenges on WebLearn it is not nescessary to make your links secure but is a good habit to develop if you want to start the habit now. Now that we have looked at the attributes we can look at an example:</p>
+    <p>
+    &lt;a href="google.com" rel="noreferrer" target="_blank"&gt;This is a search engine&lt;/a&gt;<br><br>
+    You can also put headers and paragraph tags inside of the anchor tag to make the text clickable. This is useful for making a whole section of text clickable rather than just a single word. The same can be done with images.
+    </p>
     `,
   },
   // Add more sections as needed
@@ -133,7 +158,7 @@ function Page() {
                     Need more information on how to use the syntax? Check out{" "}
                     <a
                       target="_blank"
-                      rel="noopener noreferrer" // not required but good practice for security purposes. Tabnabbing prevention
+                      rel="noreferrer" // not required but good practice for security purposes. Tabnabbing prevention
                       href="https://www.w3schools.com/html/"
                     >
                       W3Schools HTML Tutorials
