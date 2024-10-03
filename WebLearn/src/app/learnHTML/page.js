@@ -63,6 +63,20 @@ const sections = [
     </p>
     `,
   },
+  {
+    id: 3,
+    title: "Images and Iframes",
+    content: `
+    <p>Utilizing Images and Iframes in HTML is a great way to add visual content to your webpage. Images can be used to enhance the appearance of your site, provide additional information, or create a more engaging user experience. Iframes, on the other hand, allow you to embed external content, such as videos, maps, or other webpages, directly into your site. Let's take a closer look at how to use images and iframes in HTML.</p>
+    <p>To use an image tag in HTML you use the following syntax: &lt;img&gt;. You must added an attribute called src (source). The src attribute specifies the URL of the image file (if using a local image set the src as a path to the location of the file), you can also add an attribute called alt. The alt attribute provides a text description of the image. The alt attribute is important for accessibility and SEO purposes, as it helps screen readers and search engines understand the content of the image. If you are developing a website that must adhere to federal laws then having alt attributes is legally required by ADA compliances. Here is an example of an image tag:</p>
+    <p>URL src example: &lt;img src="https://www.example.com/image.jpg" alt="Example Image"&gt; <br> Local src example: &lt;img src="/images/my_image.jpg" alt="My Image"&gt; </p>
+    <p>Moving onwards we have iframes. Iframes in HTML are used to embed external content, such as videos, maps, or other webpages, directly into your site. The iframe tag is used to create an inline frame, or a window that contains another webpage or document. This allows you to display content from another source within your own webpage. Here is an example of an iframe tag:</p>
+    <p>&lt;iframe src="https://www.example.com" width="600" height="400"&gt;&lt;/iframe&gt;</p>
+    <p>An important note to make for iframes is the security vulnerabilities that come with them. Iframes can be used to embed malicious content, such as phishing forms, malware, or other harmful scripts, into your site. To mitigate these risks, it is important to use iframes responsibly and ensure that the content you are embedding is safe and trustworthy. Additionally, you can use the sandbox attribute to restrict the capabilities of the iframe and prevent it from executing scripts or accessing sensitive information. The sandbox attribute is used to create a secure sandbox environment for the iframe, which limits its capabilities and prevents it from executing scripts, accessing cookies, or performing other potentially harmful actions. Here is an example of an iframe with the sandbox attribute:</p>
+    <p>&lt;iframe src="https://www.youtube.com/embed/VhJFyyukAzA" width="600" height="400" sandbox&gt;&lt;/iframe&gt;</p>
+    <p>Now that you have learned how to use images and iframes in HTML, you can start adding visual content to your webpage and embedding external resources. Images and iframes are powerful tools that can enhance the appearance and functionality of your site, so feel free to experiment with different types of content and see what works best for your needs!</p> 
+    `,
+  },
   // Add more sections as needed
 ];
 
