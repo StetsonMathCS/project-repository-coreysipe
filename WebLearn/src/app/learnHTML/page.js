@@ -77,6 +77,95 @@ const sections = [
     <p>Now that you have learned how to use images and iframes in HTML, you can start adding visual content to your webpage and embedding external resources. Images and iframes are powerful tools that can enhance the appearance and functionality of your site, so feel free to experiment with different types of content and see what works best for your needs!</p> 
     `,
   },
+  {
+    id: 4,
+    title: "Tables and Forms",
+    content: `
+    <p>Tables and forms are essential elements of web design that allow you to organize and collect information on your site. Tables are used to display data in a structured format, while forms are used to collect user input and submit data to a server. Let's take a closer look at how to use tables and forms in HTML.</p>
+    <p>Tables in HTML are created using the &lt;table&gt; tag, which defines a table element. Tables consist of rows and columns, which are defined using the &lt;tr&gt; (table row), &lt;th&gt; (table header), and &lt;td&gt; (table data) tags. The &lt;th&gt; tag is used to define header cells in a table, while the &lt;td&gt; tag is used to define data cells. Here is an example of a simple table:</p>
+    <p>
+    &lt;table&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Header 1&lt;/th&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Header 2&lt;/th&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Header 3&lt;/th&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Data 1&lt;/td&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Data 2&lt;/td&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Data 3&lt;/td&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Data 4&lt;/td&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Data 5&lt;/td&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Data 6&lt;/td&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+    &lt;/table&gt;<br>
+    </p>
+    <p>
+    Here is what this table would look like when rendered in a browser:
+    <table>
+    <tr>
+        <th>Header 1</th>
+        <th>Header 2</th>
+        <th>Header 3</th>
+    </tr>
+    <tr>
+        <td>Data 1</td>
+        <td>Data 2</td>
+        <td>Data 3</td>
+    </tr>
+    <tr>
+        <td>Data 4</td>
+        <td>Data 5</td>
+        <td>Data 6</td>
+    </tr>
+</table>
+    </p>
+    <p>
+    Forms in HTML are created using the &lt;form&gt; tag, which defines a form element. Forms consist of input fields, such as text boxes, radio buttons, checkboxes, and submit buttons, which are defined using the &lt;input&gt; tag. The &lt;input&gt; tag is used to create various types of input fields, such as text, password, email, number, date, and more. Here is an example of a simple form:</p>
+    </p>
+    <p>
+    &lt;form&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="name"&gt;Name:&lt;/label&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="text" id="name" name="name"&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="email"&gt;Email:&lt;/label&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="email" id="email" name="email"&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="message"&gt;Message:&lt;/label&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;textarea id="message" name="message"&gt;&lt;/textarea&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="submit" value="Submit"&gt;<br>
+    &lt;/form&gt;
+    </p>
+    <p>
+    Here is what this form would look like when rendered in a browser:
+    <form>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email">
+    <label for="message">Message:</label>
+    <textarea id="message" name="message"></textarea>
+    <input type="submit" value="Submit">
+    </form>
+    </p>
+    `,
+  },
+  {
+    id: 5,
+    title: "Div tags and their uses",
+    content: `
+    <p> As a note before starting to read this section, this is the last of the HTML educational content. If you would like to see more educational content on HTML please use the feedback form. The next section to start is the CSS educational content as it will talk about learning CSS then mixing CSS into HTML coherently </p>
+    <p> Div tags are used to create divisions or sections in an HTML document. They are used to group together related elements and apply styling or formatting to them. Div tags are block-level elements, which means they create a new line before and after the element. This allows you to create distinct sections or containers on your webpage and style them independently. Let's take a closer look at how to use div tags in HTML.</p>
+    <p> To create a div tag in HTML, you use the following syntax: &lt;div&gt;. The div tag is used to define a division or section in an HTML document. It is a generic container that can hold other elements, such as text, images, links, forms, and more. Div tags are commonly used to group together related content, create layout structures, and apply styling or formatting to specific sections of a webpage. Here is an example of a div tag:</p>
+    <p> &lt;div&gt; This is a div tag. &lt;/div&gt;</p>
+    <p> Div tags can be styled using CSS to change their appearance, size, position, and other properties. You can apply CSS styles to div tags using inline styles, internal styles, or external stylesheets. This allows you to customize the look and feel of your webpage and create unique designs that match your brand or aesthetic. Here is an example of styling a div tag using CSS:</p>
+    <p> &lt;div style="background-color: lightblue; color: white; padding: 10px;"&gt; This is a styled div tag. &lt;/div&gt;</p>
+    <p> Generally it is best practice to use div tags to create layout structures and group related content together. Div tags provide a flexible and versatile way to organize your webpage and apply styling or formatting to specific sections. By using div tags effectively, you can create visually appealing and well-structured webpages that are easy to navigate and understand. In addition to this, styling elements are best used with pulling from a seperate CSS file and using the class or id on that div like below. </p>
+    <p> &lt;div class="styled-div"&gt; This is a class styled div tag. &lt;/div&gt;</p>
+    <p> &lt;div id="styled-div"&gt; This is an id styled div tag. &lt;/div&gt;</p>
+    <p> The class and id attributes are used to apply CSS styles to specific elements on a webpage. The class attribute is used to apply a style to multiple elements, while the id attribute is used to apply a style to a single element. By using classes and ids, you can target specific elements and apply custom styles to them, such as colors, fonts, margins, padding, and more. This allows you to create consistent and cohesive designs across your webpage and maintain a clean and organized code structure. </p>
+    `,
+  },
   // Add more sections as needed
 ];
 
