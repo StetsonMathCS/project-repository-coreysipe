@@ -107,9 +107,9 @@ const sections = [
     <p>Flexbox and Grid provide a wide range of properties that allow you to control the layout, alignment, and spacing of elements. Some of the most commonly used properties include <code>display</code>, <code>justify-content</code>, <code>align-items</code>, <code>grid-template-columns</code>, and <code>grid-gap</code>. By mastering Flexbox and Grid, you can create visually appealing and responsive designs that adapt to different screen sizes and devices. Here is an example of a layout created using Flexbox:</p>
     <p><code>&lt;div class="container"&gt;<br>&nbsp;&nbsp;&lt;div class="item"&gt;Item 1&lt;/div&gt;<br>&nbsp;&nbsp;&lt;div class="item"&gt;Item 2&lt;/div&gt;<br>&nbsp;&nbsp;&lt;div class="item"&gt;Item 3&lt;/div&gt;<br>&lt;/div&gt;</code></p>
     <p><code>.container {<br>&nbsp;&nbsp;display: flex;<br>&nbsp;&nbsp;justify-content: center;<br>&nbsp;&nbsp;align-items: center;<br>}</code></p>
-    <p><code>.item {<br>&nbsp;&nbsp;padding: 10px;<br>&nbsp;&nbsp;margin: 10px;<br>&nbsp;&nbsp;border: 1px solid #ccc;<br>}</code></p>
+    <p><code>.item {<br>&nbsp;&nbsp;padding: 10px;<br>&nbsp;&nbsp;margin: 10px;<br>&nbsp;&nbsp;border: 1px solid #39FF14;<br>}</code></p>
     <p>The code above looks like this:</p>
-    <p><div class="container"><div class="item">Item 1</div><div class="item">Item 2</div><div class="item">Item 3</div></div></p>
+    <p><div class="container" style="display: flex; justify-content: center; align-items: center;"><div class="item" style="padding: 10px; margin: 10px; border: 1px solid #39FF14;">Item 1</div><div class="item" style="padding: 10px; margin: 10px; border: 1px solid #39FF14;">Item 2</div><div class="item" style="padding: 10px; margin: 10px; border: 1px solid #39FF14;">Item 3</div></div></p>
     <p>By using Flexbox and Grid, you can create complex and responsive layouts that adapt to different screen sizes and devices. These layout systems provide a flexible and efficient way to structure and align elements on a web page, and they are essential for creating visually appealing and user-friendly designs. By mastering Flexbox and Grid, you can take your web design skills to the next level and create professional and modern websites.</p>
 
     `,
