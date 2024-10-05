@@ -8,96 +8,157 @@ import "../styles.css";
 const sections = [
   {
     id: 1,
-    title: "Introduction to JavaScript",
+    title: "Introduction to JavaScript and Forms",
     content: `
-      <p>JavaScript is a programming language that allows you to add interactivity and dynamic behavior to web pages. It is commonly used for client-side web development, where it runs directly in the web browser and can manipulate the HTML and CSS of a webpage. To learn JavaScript, you can start by understanding the basics of the language, such as variables, data types, operators, and control flow. You can then explore more advanced concepts like functions, objects, arrays, and DOM manipulation. One of the best ways to learn JavaScript is by practicing coding exercises and building small projects. This will help you gain hands-on experience and reinforce your understanding of the language. Now onto some basics of JS (JavaScript)</p>
-      <p>JS is a versatile language that can be used for a wide range of applications, from simple animations and interactive elements on a webpage to complex web applications and server-side development. It is an essential skill for web developers and can open up many opportunities in the tech industry. By learning JS, you can enhance your web development skills and create dynamic, interactive websites that engage users and provide a better user experience. Below is some basic code examples:</p>
-      <p><code>console.log('Hello, World!');</code></p>
-      <p><code>let name = 'John';</code></p>
-      <p><code>function greet(name) {</code></p>
-      <p><code>return 'Hello, ' + name + '!';</code></p>
-      <p><code>}</code></p>
-      <p>These examples demonstrate how to use JS to output text to the console, declare variables, and define functions. By practicing these basic concepts and building on them, you can develop your skills and become proficient in JS programming.</p>
-      <p>Another feature of JS is alerts. Alerts are pop-up boxes that display a message to the user. They can be used to provide information, warnings, or error messages. Here is an example of how to use an alert:</p>
-      <p><code>alert('Hello, World!');</code></p>
-      <p>Alerts are a useful tool for providing information to users and can be used to enhance the user experience of your website. By using alerts judiciously, you can create a more engaging and interactive website that keeps users informed and engaged.</p>
-      <p>Here are some practical ways JS is used for web development:</p>
-      <ul>
-        <li>Adding interactivity to web pages</li>
-        <li>Validating user input in forms</li>
-        <li>Making AJAX requests to fetch data from a server</li>
-        <li>Creating animations and effects</li>
-        <li>Building web applications with frameworks like React, Angular, and Next.js (WebLearn uses React and Next.js!)</li>
-      </ul>
-       `,
+      <p>JavaScript (JS) is a versatile programming language that is used to create interactive and dynamic web pages. It is an essential tool for web developers, as it allows you to add functionality to your websites and create engaging user experiences. One way it is used is to create interactive forms.</p>
+      <p>Here is an example of how you can use JS to create an interactive form between HTML and JS:</p>
+      <p>Here is the HTML code for the form:</p>
+      <p><code>&lt;form id="myForm"&gt;</code></p>
+      <p><code>&lt;input type="text" id="name" placeholder="Enter your name"&gt;</code></p>
+      <p><code>&lt;button type="submit"&gt;Submit&lt;/button&gt;</code></p>
+      <p><code>&lt;/form&gt;</code></p>
+      <p>Here is the JS code that goes with the form:</p>
+      <p><code>document.getElementById('myForm').addEventListener('submit', function(event) {</code></p>
+      <p><code>  event.preventDefault();</code></p>
+      <p><code>&nbsp;&nbsp;let name = document.getElementById('name').value;</code></p>
+      <p><code>&nbsp;&nbsp;alert('Hello, ' + name + '!');</code></p>
+      <p><code>});</code></p>
+      <p>If you would like to try this out for yourself you can go to the <a href="../">HTML, CSS & JS Editor</a> and paste the code accordingly in there to see how it works.</p>
+      <p>Forms are used primarily for collecting user input, such as login information, contact details, and feedback. By using JS to add interactivity to your forms, you can create a more engaging user experience and provide instant feedback to users.</p>
+      <p>By learning how to use JS to create interactive forms, you can enhance your web development skills and create more dynamic and engaging websites. Practice using JS to build your skills and become more proficient in web development.</p>`,
   },
   {
     id: 2,
-    title: "Javascript by itself",
+    title: "Creating Modal Windows and Popups",
     content: `
-    <p>Before diving into using JS with HTML and CSS, it is important to know how to use it on its own. Below are some examples of how to use JS in a standalone environment:</p>
-    <p><code>let x = 5;</code></p>
-    <p><code>let y = 10;</code></p>
-    <p><code>let sum = x + y;</code></p>
-    <p><code>console.log(sum);</code></p>
-    <p>These examples demonstrate how to declare variables, perform arithmetic operations (JS is capable of addition, subtraction, multiplication, and division), and output the result to the console. By practicing these basic concepts, you can develop your skills and become more knowledgeable in JS programming.</p>
-    <p>Adding onto this, you can also use JS to create interactive programs that take user input and produce output based on that input. For example, you can create a simple calculator that adds, subtracts, multiplies, or divides two numbers entered by the user. This can be done using functions and conditional statements to perform the desired operation and display the result.</p>
-    <p>Heres an example of a simple calculator:</p>
-    <p><code>function calculator(operator, num1, num2) {</code></p>
-    <p><code>let result;</code></p>
-    <p><code>switch (operator) {</code></p>
-    <p><code>case '+':</code></p>
-    <p><code>result = num1 + num2;</code></p>
-    <p><code>break;</code></p>
-    <p><code>case '-':</code></p>
-    <p><code>result = num1 - num2;</code></p>
-    <p><code>break;</code></p>
-    <p><code>case '*':</code></p>
-    <p><code>result = num1 * num2;</code></p>
-    <p><code>break;</code></p>
-    <p><code>case '/':</code></p>
-    <p><code>result = num1 / num2;</code></p>
-    <p><code>break;</code></p>
-    <p><code>default:</code></p>
-    <p><code>result = 'Invalid operator';</code></p>
-    <p><code>}</code></p>
-    <p><code>return result;</code></p>
-    <p><code>}</code></p>
-    <p>Now here is how that code looks when you use it:</p>
-    <p><code>let operator = '+';</code></p>
-    <p><code>let num1 = 5;</code></p>
-    <p><code>let num2 = 10;</code></p>
-    <p><code>let result = calculator(operator, num1, num2);</code></p>
-    <p><code>console.log(result);</code></p>
-    <p>This is just one of several ways you can use JS to create interactive programs. By practicing these concepts and building on them, you can develop your skills and become stronger in JS programming.</p>
-    
-    `,
+      <p>Modal windows and popups are common features of modern websites that are used to display additional information, alerts, or interactive elements. They are often used to provide feedback to users, collect input, or display important messages.</p>
+      <p>Here is an example of how you can use JS to create a modal window:</p>
+      <p>Here is the HTML code for the modal window:</p>
+      <p><code>&lt;div id="myModal" class="modal"&gt;</code></p>
+      <p><code>&nbsp;&nbsp;&lt;div class="modal-content"&gt;</code></p>
+      <p><code>&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="close" onclick="closeModal()"&gt;&times;&lt;/span&gt;</code></p>
+      <p><code>&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;This is a modal window!&lt;/p&gt;</code></p>
+      <p><code>&nbsp;&nbsp;&lt;/div&gt;</code></p>
+      <p><code>&lt;/div&gt;</code></p>
+      <p>Here is the JS code that goes with the modal window:</p>
+      <p><code>function openModal() {</code></p>
+      <p><code>&nbsp;&nbsp;document.getElementById('myModal').style.display = 'block';</code></p>
+      <p><code>}</code></p>
+      <p><code>function closeModal() {</code></p>
+      <p><code>&nbsp;&nbsp;document.getElementById('myModal').style.display = 'none';</code></p>
+      <p><code>}</code></p>
+      <p>Modal windows and popups are a great way to add interactivity to your website and engage users. By using JS to create modal windows, you can provide users with additional information, alerts, and interactive elements that enhance the user experience of your website.</p>`,
   },
   {
     id: 3,
-    title: "Dom Manipulation and User Interaction",
+    title: "Interactive Navigation Menus",
     content: `
-    <p>One of the key features of JavaScript is its ability to manipulate the Document Object Model (DOM) of a webpage. The DOM is a representation of the structure and content of a webpage, and JS can be used to interact with and modify it. This allows you to create dynamic, interactive web pages that respond to user input and events.</p>
-    <p>Here are some examples of how you can use JS to manipulate the DOM:</p>
-    <ul>
-      <li>Changing the text content of an element</li>
-      <li>Adding or removing HTML elements</li>
-      <li>Changing the style of an element</li>
-      <li>Responding to user events like clicks, keypresses, and mouse movements</li>
-    </ul>
-    <p>By using JS to manipulate the DOM, you can create interactive elements like buttons, forms, and animations that enhance the user experience of your website. This can help you engage users and make your website more dynamic and engaging.</p>
-    <p>Here is an example of how you can use JS to change the text content of an element:</p>
-    <p><code>let element = document.getElementById('myElement');</code></p>
-    <p><code>element.textContent = 'Hello, World!';</code></p>
-    <p>This code selects an element with the ID 'myElement' and changes its text content to 'Hello, World!'.</p>
-    <p>User interaction is another important aspect of web development that can be enhanced with JS. By responding to user events like clicks, keypresses, and mouse movements, you can create interactive elements that engage users and provide a better user experience. This can include things like form validation, image sliders, and interactive games.</p>
-    <p>Here is an example of how you can use JS to respond to a button click event:</p>
-    <p><code>let button = document.getElementById('myButton');</code></p>
-    <p><code>button.addEventListener('click', function() {</code></p>
-    <p><code>console.log('Button clicked!');</code></p>
-    <p><code>});</code></p>
-    <p>This code selects a button element with the ID 'myButton' and adds an event listener that logs 'Button clicked!' to the console when the button is clicked.</p>
-       `,
+      <p>Interactive navigation menus are an essential part of websites that allow users to navigate between different pages and sections of a website. They are often used to provide users with easy access to important information and content, and to improve the overall user experience of a website.</p>
+      <p>Here is an example of how you can use JS to create an interactive navigation menu that has visibility toggling:</p> 
+      <p>Here is the HTML code for the navigation menu:</p>
+      <p><code>&lt;button id="toggleMenu" onclick="toggleMenu()"&gt;Toggle Menu&lt;/button&gt;</code></p>
+      <p><code>&lt;ul id="menu"&gt;</code></p>
+      <p><code>&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;</code></p>
+      <p><code>&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;</code></p>
+      <p><code>&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Services&lt;/a&gt;&lt;/li&gt;</code></p>
+      <p><code>&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;</code></p>
+      <p><code>&lt;/ul&gt;</code></p>
+      <p>Here is the JS code that goes with the navigation menu:</p>
+      <p><code>let menu = document.getElementById('menu');</code></p>
+      <p><code>function toggleMenu() {</code></p>
+      <p><code>&nbsp;&nbsp;if (menu.style.display === 'block') {</code></p>
+      <p><code>&nbsp;&nbsp;&nbsp;&nbsp;menu.style.display = 'none';</code></p>
+      <p><code>&nbsp;&nbsp;} else {</code></p>
+      <p><code>&nbsp;&nbsp;&nbsp;&nbsp;menu.style.display = 'block';</code></p>
+      <p><code>&nbsp;&nbsp;}</code></p>
+      <p><code>}</code></p>
+      <p>Navigation menus are a key part of present day websites that help users navigate between different pages and sections of a website. By using JS to create a responsive navigation menu, you can provide users with easy access to important information and content, and improve the overall user experience of your website.</p>`,
+  },
+  {
+    id: 4,
+    title: "Accordion Menus: Expanding and Collapsing Content",
+    content: `
+      <p>Accordion menus are a popular feature of websites that allow users to expand and collapse content sections to view additional information. They are often used to display FAQs, product information, and other content that can be organized into sections. Below is how to create an accordion utilizing HTML, CSS, and JavaScript.</p>
+      <p>Here is the HTML code for the accordion menu:</p>
+      <p><code>
+      &lt;div class="accordion"&gt;<br>
+      &nbsp;&nbsp;&lt;button class="accordion-button" onclick="toggleAccordion(this)"&gt;Section 1&lt;/button&gt;<br>
+      &nbsp;&nbsp;&lt;div class="accordion-content"&gt;<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Content for Section 1&lt;/p&gt;<br>
+      &nbsp;&nbsp;&lt;/div&gt;<br>
+      &nbsp;&nbsp;&lt;button class="accordion-button" onclick="toggleAccordion(this)"&gt;Section 2&lt;/button&gt;<br>
+      &nbsp;&nbsp;&lt;div class="accordion-content"&gt;<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Content for Section 2&lt;/p&gt;<br>
+      &nbsp;&nbsp;&lt;/div&gt;<br>
+      &lt;/div&gt;</code>
+      </p>
+      <p>Here is the CSS code for the accordion menu:</p>
+      <p><code>
+      .accordion-button {<br>
+        &nbsp;&nbsp;background-color: #f0f0f0;<br>
+        &nbsp;&nbsp;border: none;<br>
+        &nbsp;&nbsp;padding: 10px;<br>
+        &nbsp;&nbsp;cursor: pointer;<br>
+      }<br>
+      
+      .accordion-content {<br>
+        &nbsp;&nbsp;display: none;<br>
+        &nbsp;&nbsp;padding: 10px;<br>
+      }
+      </code></p>
+      <p>Here is the JS code that goes with the accordion menu:</p>
+      <p><code>
+      function toggleAccordion(button) {<br>
+        &nbsp;&nbsp;const content = button.nextElementSibling;<br>
+        &nbsp;&nbsp;content.style.display = content.style.display === "block" ? "none" : "block";<br>
+      }
+      </code></p>
+      <p>Accordions are useful for displaying content onto a page where a lot of scrolling would happen due to the amount of information on the page. Users are less likely to read everything if they feel it appears too lengthy. </p>
+      `,
+  },
+  {
+    id: 5,
+    title: "How to create animation!",
+    content: `
+    <p>This is the last chapter of the last section. If you've made it this far, thanks for using WebLearn! More will come soon. For now, keep learning and playing around with HTML, CSS, and JavaScript! The world is your oyster.</p>
+    <p>Lets have some fun creating an animation! Animations can be eye catching and visually appealing if used correctly. They can also be used to make fun projects for your on personal entertainment! We will utilize HTML, CSS, and JavaScript to do this.</p>
+    <p>Here is the HTML code for the animation:</p>
+    <p><code>
+    &lt;div class="ball"&gt;&lt;/div&gt;
+    </code></p>
+    <p>Here is the CSS code for the animation:</p>
+    <p><code>
+    .ball { <br>
+      &nbsp;&nbsp;width: 50px;<br>
+      &nbsp;&nbsp;height: 50px;<br>
+      &nbsp;&nbsp;background-color: red;<br>
+      &nbsp;&nbsp;border-radius: 50%;<br>
+      &nbsp;&nbsp;position: absolute;<br>
+      &nbsp;&nbsp;top: 0;<br>
+      &nbsp;&nbsp;left: 0;<br>
+    }
+    </code></p>
+    <p>Here is the JS code that goes with the animation:</p>
+    <p><code>
+    const ball = document.querySelector('.ball');<br>
+    let direction = 1;<br>
+    let speed = 2;<br>
+    let topPosition = 0;<br>
+
+    function animate() {<br>
+      &nbsp;&nbsp;topPosition += speed * direction;<br>
+      &nbsp;&nbsp;if (topPosition >= window.innerHeight - 50 || topPosition <= 0) {<br>
+        &nbsp;&nbsp;direction *= -1;<br>
+        &nbsp;&nbsp;}<br>
+        &nbsp;&nbsp;ball.style.top = topPosition + 'px';<br>
+        &nbsp;&nbsp;requestAnimationFrame(animate);<br>
+    }<br>
+
+    animate();
+    </code></p>
+    <p>Animations can be used to create engaging and interactive user experiences on your website. By using JS to create animations, you can add visual interest to your website and make it more dynamic and engaging for users. Practice creating animations to enhance your web development skills and create more visually appealing websites.</p>
+
+    `,
   },
   // Add more sections as needed
 ];
