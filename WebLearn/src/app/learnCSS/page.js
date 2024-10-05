@@ -16,7 +16,7 @@ const sections = [
     <p>An important note for linking your style sheet file is the path to the location of your stylesheet is what goes into the attribute. EX: rel="/css/myCSS.css" CSS files use the extension .css</p>
     <p>Inline CSS:</p> 
     <p><code>&lt;head&gt;<br>&nbsp;&nbsp;&lt;style&gt; h1 { color: red; } &lt;/style&gt;<br>&lt;/head&gt;</code></p>
-    <p>Both methods work but external CSS is normally the preferred method. For the purpose of the challenges utilizing CSS you will use inline css via styling in the head of the documents. CSS rules consist of a selector and a declaration block. The selector specifies which elements the styles should apply to, and the declaration block contains the styles to be applied. Here is an example of a CSS rule:</p>
+    <p>Both methods work but external CSS is normally the preferred method. For the purpose of the challenges utilizing CSS you will use both styles of CSS. CSS rules consist of a selector and a declaration block. The selector specifies which elements the styles should apply to, and the declaration block contains the styles to be applied. Here is an example of a CSS rule:</p>
     <p><code>h1 { color: red; font-size: 24px; }</code></p>
     <p>This rule selects all <code>&lt;h1&gt;</code> elements and sets their color to red and font size to 24 pixels. You can also use CSS to create responsive designs that adapt to different screen sizes and devices. Media queries are a powerful feature of CSS that allow you to apply different styles based on the device's characteristics, such as screen width, height, and orientation. Here is an example of a media query:</p>
     <p><code>@media screen and (max-width: 600px) { h1 { font-size: 18px; } }</code></p>
