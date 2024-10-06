@@ -31,7 +31,7 @@ const challenges = [
     title: "Movie List Challenge",
     complexity: "Complexity:  ★★☆☆☆",
     description:
-      "Create an HTML page that displays a list of your favorite movies. Each movie should have a title, a brief description, and a link to the movie's IMDB page. Make the background a color of your choice and log to the console a test message.",
+      "Create an HTML page that displays a list of your favorite movies. Each movie should have a title, a brief description, and a link to the movie's IMDB page. You should have at least 2 movies in your list.",
     hint: "Use the <ul> and <li> tags to create a list of movies. You can use the <a> tag to create a link to the IMDB pages.",
     initialHtml: `
 <!DOCTYPE html>
@@ -42,6 +42,63 @@ const challenges = [
 <body>
     <h1>My Favorite Movies</h1>
     <!-- Add your movie list here -->
+</body>
+</html>
+    `,
+  },
+  {
+    id: 3,
+    title: "Iframe Challenge",
+    complexity: "Complexity:  ★★☆☆☆",
+    description:
+      "Create an HTML page that uses two iframes with one displaying a YouTube video and the other displaying a Wikipedia page.",
+    hint: "Use the <iframe> tag to embed the YouTube video and Wikipedia page.",
+    initialHtml: `
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Iframe Challenge</title>
+  </head>
+  <body>
+      <!-- Add your iframes here -->
+  </body>
+</html>
+    `,
+  },
+  {
+    id: 4,
+    title: "Calendar and Login Form Challenge",
+    complexity: "Complexity:  ★★★☆☆",
+    description:
+      "Create an HTML page that displays a calendar and a login form. The calendar should show the current month and year. The login form should have fields for a username and password.",
+    hint: "Use the <table> tag to create the calendar and the <form> tag to create the login form.",
+    initialHtml: `
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calendar and Login Form</title>
+</head>
+<body>
+    <!-- Add your calendar and login form here -->
+</body>
+</html>
+    `,
+  },
+  {
+    id: 5,
+    title: "Inline styling Div Challenge",
+    complexity: "Complexity:  ★★★☆☆",
+    description:
+      "Create an HTML page that has a div with text inside of it. The div should have a background color, text color, and padding. The text should be centered in the div.",
+    hint: "Use the <div> tag to create the div and use the style attribute to add the styling.",
+    initialHtml: `
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inline Styling Div</title>
+</head>
+<body>
+    <!-- Add your styled div here -->
 </body>
 </html>
     `,
@@ -71,15 +128,16 @@ function Page() {
   useEffect(() => {
     handleRunCode();
     adjustChallengesContainerHeight();
-    window.addEventListener('resize', adjustChallengesContainerHeight);
-    return () => window.removeEventListener('resize', adjustChallengesContainerHeight);
+    window.addEventListener("resize", adjustChallengesContainerHeight);
+    return () =>
+      window.removeEventListener("resize", adjustChallengesContainerHeight);
   }, []);
 
   const adjustChallengesContainerHeight = () => {
     if (challengesContainerRef.current) {
       const windowHeight = window.innerHeight;
       const containerTop = challengesContainerRef.current.offsetTop;
-      const footerHeight = windowHeight * 0.1; 
+      const footerHeight = windowHeight * 0.1;
       const newHeight = windowHeight - containerTop - footerHeight;
       challengesContainerRef.current.style.height = `${newHeight}px`;
     }
@@ -140,28 +198,40 @@ function Page() {
                     Educational Content
                   </a>
                 </p>
-                <div className="challenges-container mx-2 flex-grow-1 d-flex flex-column" ref={challengesContainerRef}>
-                <div className="challenges-navigation">
-                  <button onClick={handlePrevChallenge} className="btn btn-secondary me-2">
-                    <ChevronLeft size={20} />
-                  </button>
-                  <button onClick={handleNextChallenge} className="btn btn-secondary">
-                    <ChevronRight size={20} />
-                  </button>
+                <div
+                  className="challenges-container mx-2 flex-grow-1 d-flex flex-column"
+                  ref={challengesContainerRef}
+                >
+                  <div className="challenges-navigation">
+                    <button
+                      onClick={handlePrevChallenge}
+                      className="btn btn-secondary me-2"
+                    >
+                      <ChevronLeft size={20} />
+                    </button>
+                    <button
+                      onClick={handleNextChallenge}
+                      className="btn btn-secondary"
+                    >
+                      <ChevronRight size={20} />
+                    </button>
+                  </div>
+                  <h3>Challenge #{currentChallenge.id}:</h3>
+                  <div className="flex-grow-1 overflow-auto">
+                    <p>{currentChallenge.complexity}</p>
+                    <p>{currentChallenge.description}</p>
+                    <h4>Hint:</h4>
+                    <p>{currentChallenge.hint}</p>
+                  </div>
+                  <p className="mt-2">
+                    <button
+                      className="btn btn-secondary py-1 d-block w-100"
+                      onClick={handleRunCode}
+                    >
+                      Run Code
+                    </button>
+                  </p>
                 </div>
-                <h3>Challenge #{currentChallenge.id}:</h3>
-                <div className="flex-grow-1 overflow-auto">
-                  <p>{currentChallenge.complexity}</p>
-                  <p>{currentChallenge.description}</p>
-                  <h4>Hint:</h4>
-                  <p>{currentChallenge.hint}</p>
-                </div>
-                <p className="mt-2">
-                  <button className="btn btn-secondary py-1 d-block w-100" onClick={handleRunCode}>
-                    Run Code
-                  </button>
-                </p>
-              </div>
               </div>
               <div className="col-5 h-100">
                 <CodeEditor

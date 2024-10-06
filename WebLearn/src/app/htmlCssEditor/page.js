@@ -31,10 +31,10 @@ const challenges = [
   },
   {
     id: 2,
-    title: "Create a Simple Card",
+    title: "Class and ID Practice",
     complexity: "Complexity:  ★★☆☆☆",
     description:
-      "Create a simple card that displays information about a fictional product. Use HTML to structure the card and CSS to style the elements.",
+      "Create a simple card that displays information about a fictional product. Use HTML to structure the card and CSS to style the elements. Use atleast one class and one id in your HTML.",
     hint: "Use <div> elements to create the card structure. You can use CSS to add borders, padding, and background color to the card.",
     initialHtml: `
 <!DOCTYPE html>
@@ -57,6 +57,92 @@ const challenges = [
   /* Add your card styles here */
 }
   `,
+  },
+  {
+    id: 3,
+    title: "Attribute Practice",
+    complexity: "Complexity:  ★★★☆☆",
+    description:
+      "Create anything you want using HTML and CSS. Use at 4 different CSS properties to style the page nicely.",
+    hint: "Use the <div> tag to create a container for your content. You can use CSS to style the container and its contents.",
+    initialHtml: `
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Page</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to My Page</h1>
+    <p>This is a paragraph of text.</p>
+    <button>Click Me</button>
+  </div>
+</body>
+</html>
+  `,
+    initialCss: `
+/* Add your CSS styles here */
+.container {
+  /* Add your container styles here */
+}
+  `,
+  },
+  {
+    id: 4,
+    title: "Styling buttons and dropdowns Practice",
+    complexity: "Complexity:  ★★★☆☆",
+    description:
+      "Create a webpage that has a button and a dropdown menu. Style the button and dropdown menu using CSS.",
+    hint: "Use the <button> and <select> tags to create the button and dropdown menu. You can use CSS to style the button and dropdown menu.",
+    initialHtml: `
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Button and Dropdown</title>
+</head>
+<body>
+  <button>Click Me</button>
+  <select>
+    <option>Option 1</option>
+    <option>Option 2</option>
+    <option>Option 3</option> 
+  </select>
+</body>
+</html>
+  `,
+    initialCss: `
+/* Add your CSS styles here */
+button {
+  /* Add your button styles here */
+  }`,
+  },
+  {
+    id: 5,
+    title: "Flexbox Practice",
+    complexity: "Complexity:  ★★★★☆",
+    description:
+      "Create a webpage that uses flexbox to layout elements. Use flexbox properties to create a responsive layout.",
+    hint: "Use the <div> tag to create containers for your content. You can use CSS and flexbox properties to create the layout.",
+    initialHtml: `
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Flexbox Layout</title>
+</head>
+<body>
+  <div class="container">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+  </div>
+</body>
+</html>
+  `,
+    initialCss: `
+/* Add your CSS styles here */
+.container {
+  /* Add your container styles here */
+  }`,
   },
 ];
 
@@ -85,15 +171,16 @@ function Page() {
   useEffect(() => {
     handleRunCode();
     adjustChallengesContainerHeight();
-    window.addEventListener('resize', adjustChallengesContainerHeight);
-    return () => window.removeEventListener('resize', adjustChallengesContainerHeight);
+    window.addEventListener("resize", adjustChallengesContainerHeight);
+    return () =>
+      window.removeEventListener("resize", adjustChallengesContainerHeight);
   }, []);
 
   const adjustChallengesContainerHeight = () => {
     if (challengesContainerRef.current) {
       const windowHeight = window.innerHeight;
       const containerTop = challengesContainerRef.current.offsetTop;
-      const footerHeight = windowHeight * 0.1; 
+      const footerHeight = windowHeight * 0.1;
       const newHeight = windowHeight - containerTop - footerHeight;
       challengesContainerRef.current.style.height = `${newHeight}px`;
     }
@@ -154,12 +241,21 @@ function Page() {
                   Educational Content
                 </a>
               </p>
-              <div className="challenges-container mx-2 flex-grow-1 d-flex flex-column" ref={challengesContainerRef}>
+              <div
+                className="challenges-container mx-2 flex-grow-1 d-flex flex-column"
+                ref={challengesContainerRef}
+              >
                 <div className="challenges-navigation">
-                  <button onClick={handlePrevChallenge} className="btn btn-secondary me-2">
+                  <button
+                    onClick={handlePrevChallenge}
+                    className="btn btn-secondary me-2"
+                  >
                     <ChevronLeft size={20} />
                   </button>
-                  <button onClick={handleNextChallenge} className="btn btn-secondary">
+                  <button
+                    onClick={handleNextChallenge}
+                    className="btn btn-secondary"
+                  >
                     <ChevronRight size={20} />
                   </button>
                 </div>
@@ -171,7 +267,10 @@ function Page() {
                   <p>{currentChallenge.hint}</p>
                 </div>
                 <p className="mt-2">
-                  <button className="btn btn-secondary py-1 d-block w-100" onClick={handleRunCode}>
+                  <button
+                    className="btn btn-secondary py-1 d-block w-100"
+                    onClick={handleRunCode}
+                  >
                     Run Code
                   </button>
                 </p>

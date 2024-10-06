@@ -118,7 +118,7 @@ const sections = [
   },
   {
     id: 5,
-    title: "How to create animation!",
+    title: "How to create animations!",
     content: `
     <p>This is the last chapter of the last section. If you've made it this far, thanks for using WebLearn! More will come soon. For now, keep learning and playing around with HTML, CSS, and JavaScript! The world is your oyster.</p>
     <p>Lets have some fun creating an animation! Animations can be eye catching and visually appealing if used correctly. They can also be used to make fun projects for your on personal entertainment! We will utilize HTML, CSS, and JavaScript to do this.</p>
