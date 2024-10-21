@@ -14,7 +14,10 @@ const CodeEditor = ({ selectedLanguage, defaultValue, onCodeChange }) => {
   };
 
   return (
-    <div className="code-editor-container relative">
+    <div
+      className="code-editor-container relative"
+      style={{ border: "1px solid black" }}
+    >
       <div className="language-tab absolute top-0 left-0 bg-gray-700 px-2 py-1 rounded-br z-10">
         {selectedLanguage.toUpperCase()}
       </div>
@@ -26,7 +29,7 @@ const CodeEditor = ({ selectedLanguage, defaultValue, onCodeChange }) => {
         theme="vs-dark"
         onChange={handleEditorChange}
         options={{
-          padding: { top: 20 }, 
+          padding: { top: 20 },
         }}
       />
     </div>

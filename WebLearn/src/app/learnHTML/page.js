@@ -193,7 +193,7 @@ function Page() {
         <main className="flex-grow-1 overflow-hidden">
           <div className="container-fluid h-100 g-0">
             <div className="row h-100 g-0">
-              <div className="col-2">
+              <div className="col-2 navbar-bg">
                 <h1 className="mx-2">WebLearn</h1>
                 <h2 className="mx-2">Practice Modes</h2>
                 <p>
@@ -226,7 +226,7 @@ function Page() {
                   </a>
                 </p>
               </div>
-              <div className="col-8 h-100 overflow-auto">
+              <div className=" px-2 pt-1 col-8 h-100 overflow-auto">
                 <div
                   dangerouslySetInnerHTML={{ __html: currentSection.content }}
                 />

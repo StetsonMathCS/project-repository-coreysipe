@@ -2,8 +2,31 @@
   height: 90vh;
 }
 
+.btn {
+  background: #14afce;
+  border: 1px solid black;
+  color: black;
+}
+
+.btn:hover {
+  background: #0e788d;
+  color: black;
+}
+.navbar-bg {
+  background-color: #212529;
+}
+
+.navbar-text {
+  color: aliceblue;
+}
+.display-border-light {
+  border: 1px solid black;
+}
+
 .footer {
-  background-color: #949494;
+  background-color: #2d3047;
+  color: aliceblue;
+  border: 1px solid black;
   text-align: center;
   display: flex;
   justify-content: center;

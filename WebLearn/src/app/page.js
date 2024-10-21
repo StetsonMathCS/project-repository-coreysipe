@@ -257,10 +257,10 @@ function Page() {
       <div className="d-flex flex-column vh-100">
         <main className="flex-grow-1 overflow-hidden">
           <div className="row h-100 g-0">
-            <div className="col-2 d-flex flex-column">
+            <div className="col-2 navbar-bg d-flex flex-column">
               <div>
-                <h1 className="mx-2">WebLearn</h1>
-                <h2 className="mx-2">Practice Modes</h2>
+                <h1 className="mx-2 navbar-text">WebLearn</h1>
+                <h5 className="mx-2 navbar-text">Content Navigation</h5>
                 <p>
                   <a
                     href="/htmlEditor"
@@ -309,12 +309,14 @@ function Page() {
                     <ChevronRight size={20} />
                   </button>
                 </div>
-                <h3>Challenge #{currentChallenge.id}:</h3>
-                <div className="flex-grow-1 overflow-auto">
-                  <p>{currentChallenge.complexity}</p>
-                  <p>{currentChallenge.description}</p>
-                  <h4>Hint:</h4>
-                  <p>{currentChallenge.hint}</p>
+                <div className="navbar-text overflow-auto">
+                  <h3>Challenge #{currentChallenge.id}:</h3>
+                  <div className="flex-grow-1">
+                    <p>{currentChallenge.complexity}</p>
+                    <p>{currentChallenge.description}</p>
+                    <h4>Hint:</h4>
+                    <p>{currentChallenge.hint}</p>
+                  </div>
                 </div>
                 <p className="mt-2">
                   <button
@@ -356,7 +358,6 @@ function Page() {
                     <iframe
                       ref={iframeRef}
                       className="box4 output w-100 h-100"
-                      style={{ border: "none" }}
                     />
                   </div>
                 </div>
