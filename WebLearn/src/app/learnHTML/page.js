@@ -194,8 +194,16 @@ function Page() {
           <div className="container-fluid h-100 g-0">
             <div className="row h-100 g-0">
               <div className="col-2 navbar-bg">
-                <h1 className="mx-2">WebLearn</h1>
-                <h2 className="mx-2">Practice Modes</h2>
+                <h1 className="mx-2 navbar-text">WebLearn</h1>
+                <h5 className="mx-2 navbar-text">Content Navigation</h5>
+                <p>
+                  <a
+                    href="/instructLimits"
+                    className="btn btn-secondary d-block mx-2 py-1"
+                  >
+                    Instructions & Limitations
+                  </a>
+                </p>
                 <p>
                   <a
                     href="/htmlEditor"
@@ -226,12 +234,12 @@ function Page() {
                   </a>
                 </p>
               </div>
-              <div className=" px-2 pt-1 col-8 h-100 overflow-auto">
+              <div className="px-2 pt-1 col-8 h-100 overflow-auto">
                 <div
                   dangerouslySetInnerHTML={{ __html: currentSection.content }}
                 />
               </div>
-              <div className="col-2">
+              <div className="col-2 navbar-bg navbar-text">
                 <div className="challenges-container mx-2 mt-auto">
                   <div className="mt-2 challenges-navigation">
                     <button

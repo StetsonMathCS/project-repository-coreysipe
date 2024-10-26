@@ -12,9 +12,17 @@ function Page() {
       <main className="vh-90">
         <div className="container-fluid h-100 g-0">
           <div className="row h-100 g-0">
-            <div className="col-2">
-              <h1 className="mx-2">WebLearn</h1>
-              <h2 className="mx-2">Practice Modes</h2>
+            <div className="col-2 navbar-bg">
+              <h1 className="mx-2 navbar-text">WebLearn</h1>
+              <h5 className="mx-2 navbar-text">Content Navigation</h5>
+              <p>
+                <a
+                  href="/instructLimits"
+                  className="btn btn-secondary d-block mx-2 py-1"
+                >
+                  Instructions & Limitations
+                </a>
+              </p>
               <p>
                 <a
                   href="/htmlEditor"
@@ -45,7 +53,7 @@ function Page() {
                 </a>
               </p>
             </div>
-            <div className="col-4 h-100 overflow-auto">
+            <div className="px-2 pt-1 col-4 h-100 overflow-auto">
               <p>
                 HTML (Hypertext Markup Language) is the standard markup language
                 for creating web pages. It provides the structure and content of
@@ -73,7 +81,7 @@ function Page() {
                 Learn HTML
               </a>
             </div>
-            <div className="col-3 h-100 overflow-auto">
+            <div className="px-2 pt-1 col-3 h-100 overflow-auto">
               <p>
                 CSS (Cascading Style Sheets) is a stylesheet language used for
                 describing the look and formatting of a document written in
@@ -92,7 +100,7 @@ function Page() {
                 Learn CSS
               </a>
             </div>
-            <div className="col-3 h-100 overflow-auto">
+            <div className="px-2 pt-1 col-3 h-100 overflow-auto">
               <p>
                 JavaScript is a programming language that allows you to add
                 interactivity and dynamic behavior to your web pages. With

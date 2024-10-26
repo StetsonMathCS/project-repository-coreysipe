@@ -263,6 +263,14 @@ function Page() {
                 <h5 className="mx-2 navbar-text">Content Navigation</h5>
                 <p>
                   <a
+                    href="/instructLimits"
+                    className="btn btn-secondary d-block mx-2 py-1"
+                  >
+                    Instructions & Limitations
+                  </a>
+                </p>
+                <p>
+                  <a
                     href="/htmlEditor"
                     className="btn btn-secondary d-block mx-2 py-1"
                   >

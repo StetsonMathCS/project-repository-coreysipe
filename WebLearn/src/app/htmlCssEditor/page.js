@@ -212,9 +212,17 @@ function Page() {
       <main>
         <div className="container-fluid g-0">
           <div className="row h-100 g-0">
-            <div className="col-2">
-              <h1 className="mx-2">WebLearn</h1>
-              <h2 className="mx-2">Practice Modes</h2>
+            <div className="col-2 navbar-bg">
+              <h1 className="mx-2 navbar-text">WebLearn</h1>
+              <h5 className="mx-2 navbar-text">Content Navigation</h5>
+              <p>
+                <a
+                  href="/instructLimits"
+                  className="btn btn-secondary d-block mx-2 py-1"
+                >
+                  Instructions & Limitations
+                </a>
+              </p>
               <p>
                 <a
                   href="/htmlEditor"
@@ -259,8 +267,8 @@ function Page() {
                     <ChevronRight size={20} />
                   </button>
                 </div>
-                <h3>Challenge #{currentChallenge.id}:</h3>
-                <div className="flex-grow-1 overflow-auto">
+                <div className="flex-grow-1 navbar-text overflow-auto">
+                  <h3>Challenge #{currentChallenge.id}:</h3>
                   <p>{currentChallenge.complexity}</p>
                   <p>{currentChallenge.description}</p>
                   <h4>Hint:</h4>
