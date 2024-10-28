@@ -376,7 +376,10 @@ function Page() {
         <footer className="footer">
           <p className="m-0 py-3">
             Designed & Developed by Corey Sipe. Have a suggestion or critique?
-            <a href="#"> Fill out a feedback form! </a>
+            <a target="_blank" href="https://forms.gle/vAMBqqHPxnH7eX4Q8">
+              {" "}
+              Fill out a feedback form!{" "}
+            </a>
             Just because the code can run doesn't mean it is the right way to do
             something.
           </p>
