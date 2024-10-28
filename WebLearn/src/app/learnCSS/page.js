@@ -182,12 +182,12 @@ function Page() {
                   </a>
                 </p>
               </div>
-              <div className="px-2 pt-1 col-8 h-100 overflow-auto">
+              <div className="px-2 pt-1 col-8 h-100 display-border-light overflow-auto">
                 <div
                   dangerouslySetInnerHTML={{ __html: currentSection.content }}
                 />
               </div>
-              <div className="col-2 navbar-bg navbar-text">
+              <div className="col-2 pt-1 display-border-light">
                 <div className="challenges-container mx-2 mt-auto">
                   <div className="challenges-navigation">
                     <button
@@ -219,9 +219,9 @@ function Page() {
                     <a
                       target="_blank"
                       rel="noopener noreferrer" // not required but good practice for security purposes. Tabnabbing prevention
-                      href="https://www.w3schools.com/js/DEFAULT.asp"
+                      href="https://www.w3schools.com/css/DEFAULT.asp"
                     >
-                      W3Schools JavaScript Tutorials
+                      W3Schools CSS Tutorials
                     </a>
                   </p>
                 </div>

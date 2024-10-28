@@ -50,7 +50,7 @@ function Page() {
                 </a>
               </p>
             </div>
-            <div className="px-2 pt-1 col-10 h-100 overflow-auto">
+            <div className="px-2 display-border-light pt-1 col-10 h-100 overflow-auto">
               <p>
                 WebLearn is an educational platform designed to help you learn
                 how to use HTML, CSS & JavaScript (JS). It teaches you by

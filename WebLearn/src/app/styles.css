@@ -3,29 +3,34 @@
 }
 
 .btn {
-  background: #38c849;
+  background: rgb(60, 60, 60);
   border: 1px solid black;
-  color: black;
+  color: white;
 }
 
 .btn:hover {
-  background: #2da33b;
-  color: black;
+  background: #1c1c1c;
+  color: white;
 }
 .navbar-bg {
-  background-color: #212529;
+  background-color: rgb(103, 44, 200);
+  border: 1px solid black;
 }
-
 .navbar-text {
-  color: aliceblue;
+  color: white;
 }
 .display-border-light {
   border: 1px solid black;
 }
 
+.display-border-top {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
 .footer {
-  background-color: #2d3047;
-  color: aliceblue;
+  background-color: black;
+  color: white;
   border: 1px solid black;
   text-align: center;
   display: flex;
