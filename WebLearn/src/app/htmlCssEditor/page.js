@@ -17,12 +17,12 @@ const challenges = [
     initialHtml: `
 <!DOCTYPE html>
 <html>
-<head>
-  <title>My Favorite Quote</title>
-</head>
-<body>
-  <h1>Insert your favorite quote here</h1>
-</body>
+  <head>
+    <title>My Favorite Quote</title>
+  </head>
+  <body>
+    <h1>Insert your favorite quote here</h1>
+  </body>
 </html>
   `,
     initialCss: `
@@ -39,16 +39,16 @@ const challenges = [
     initialHtml: `
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Product Card</title>
-</head>
-<body>
-  <div class="card">
-    <h2>Product Name</h2>
-    <p>Description of the product</p>
-    <button>Buy Now</button>
-  </div>
-</body>
+  <head>
+    <title>Product Card</title>
+  </head>
+  <body>
+    <div class="card">
+      <h2>Product Name</h2>
+      <p>Description of the product</p>
+      <button>Buy Now</button>
+    </div>
+  </body>
 </html>
   `,
     initialCss: `
@@ -68,16 +68,16 @@ const challenges = [
     initialHtml: `
 <!DOCTYPE html>
 <html>
-<head>
-  <title>My Page</title>
-</head>
-<body>
-  <div class="container">
-    <h1>Welcome to My Page</h1>
-    <p>This is a paragraph of text.</p>
-    <button>Click Me</button>
-  </div>
-</body>
+  <head>
+    <title>My Page</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Welcome to My Page</h1>
+      <p>This is a paragraph of text.</p>
+      <button>Click Me</button>
+    </div>
+  </body>
 </html>
   `,
     initialCss: `
@@ -97,17 +97,17 @@ const challenges = [
     initialHtml: `
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Button and Dropdown</title>
-</head>
-<body>
-  <button>Click Me</button>
-  <select>
-    <option>Option 1</option>
-    <option>Option 2</option>
-    <option>Option 3</option> 
-  </select>
-</body>
+  <head>
+    <title>Button and Dropdown</title>
+  </head>
+  <body>
+    <button>Click Me</button>
+    <select>
+      <option>Option 1</option>
+      <option>Option 2</option>
+      <option>Option 3</option> 
+    </select>
+  </body>
 </html>
   `,
     initialCss: `
@@ -126,16 +126,16 @@ button {
     initialHtml: `
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Flexbox Layout</title>
-</head>
-<body>
-  <div class="container">
-    <div class="item">Item 1</div>
-    <div class="item">Item 2</div>
-    <div class="item">Item 3</div>
-  </div>
-</body>
+  <head>
+    <title>Flexbox Layout</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item">Item 1</div>
+      <div class="item">Item 2</div>
+      <div class="item">Item 3</div>
+    </div>
+  </body>
 </html>
   `,
     initialCss: `
@@ -144,6 +144,64 @@ button {
   /* Add your container styles here */
   }`,
   },
+  {
+    id: 6,
+    title: "CSS Animation Practice",
+    complexity: "Complexity: ★★★★☆",
+    description:
+      "Create a simple animation using CSS. Animate an element to move across the screen.",
+    hint: "Use the @keyframes rule to define the animation and the animation property to apply it to an element.",
+    initialHtml: `
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <title>CSS Animation</title>
+    </head>
+    <body>
+
+    </body>
+  </html>
+    `,
+    initialCss: `
+  /* Add your CSS styles here */
+  .animated-box {
+   
+  }
+
+  @keyframes move {
+
+  }
+    `,
+  },
+  {
+    id: 7,
+    title: "CSS Variables Practice",
+    complexity: "Complexity: ★★★☆☆",
+    description:
+      "Create a webpage that uses CSS variables to manage colors and font sizes.",
+    hint: "Use the :root selector to define your CSS variables and use the var() function to apply them.",
+    initialHtml: `
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <title>CSS Variables</title>
+    </head>
+    <body>
+
+    </body>
+  </html>
+    `,
+    initialCss: `
+  /* Add your CSS styles here */
+  :root {
+   
+  }
+
+  body {
+   
+  }
+    `,
+  }
 ];
 
 function Page() {

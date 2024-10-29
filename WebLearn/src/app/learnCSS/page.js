@@ -114,6 +114,49 @@ const sections = [
 
     `,
   },
+  {
+    id: 6,
+    title: "CSS Animations",
+    content: `
+    <p>CSS animations allow you to create dynamic and engaging visual effects on your web pages. By using keyframes and animation properties, you can animate various CSS properties such as color, size, position, and more. Here is an example of how to create a simple CSS animation:</p>
+    <p>HTML:</p>
+    <p><code>&lt;div class="box"&gt;&lt;/div&gt;</code></p>
+    <p>CSS:</p>
+    <p><code>
+    .box {<br>
+    &nbsp;&nbsp;width: 100px;<br>
+    &nbsp;&nbsp;height: 100px;<br>
+    &nbsp;&nbsp;background-color: red;<br>
+    &nbsp;&nbsp;animation: move 2s infinite;<br>
+    }<br>
+    @keyframes move {<br>
+    &nbsp;&nbsp;0% { transform: translateX(0); }<br>
+    &nbsp;&nbsp;50% { transform: translateX(100px); }<br>
+    &nbsp;&nbsp;100% { transform: translateX(0); }<br>
+    }
+    </code></p>
+    <p>This example animates a red box, moving it 100 pixels to the right and back to its original position. The animation runs for 2 seconds and repeats infinitely. By using CSS animations, you can create visually appealing and interactive designs that enhance the user experience.</p>
+    `,
+  },
+  {
+    id: 7,
+    title: "CSS Variables",
+    content: `
+    <p>CSS variables, also known as custom properties, allow you to store values that can be reused throughout your CSS. This makes it easier to manage and maintain your styles, especially in large projects. Here is an example of how to use CSS variables:</p>
+    <p>CSS:</p>
+    <p><code>
+    :root {<br>
+    &nbsp;&nbsp;--main-color: #3498db;<br>
+    &nbsp;&nbsp;--padding: 10px;<br>
+    }<br>
+    .box {<br>
+    &nbsp;&nbsp;background-color: var(--main-color);<br>
+    &nbsp;&nbsp;padding: var(--padding);<br>
+    }
+    </code></p>
+    <p>In this example, we define two CSS variables <code>--main-color</code> and <code>--padding</code> in the <code>:root</code> selector. We then use these variables in the <code>.box</code> class. By using CSS variables, you can create more modular and maintainable styles, making it easier to update and manage your CSS code.</p>
+    `,
+  }
   // Add more sections as needed
 ];
 
