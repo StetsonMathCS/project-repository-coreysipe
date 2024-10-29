@@ -13,7 +13,7 @@
   color: white;
 }
 .navbar-bg {
-  background-color: rgb(103, 44, 200);
+  background-color: #0a1318;
   border: 1px solid black;
 }
 .navbar-text {
@@ -26,6 +26,15 @@
 .display-border-top {
   border-top: 1px solid black;
   border-bottom: 1px solid black;
+}
+
+.text-fixing {
+  max-width: 900px;
+  margin: 0px auto;
+}
+
+.center {
+  text-align: center;
 }
 
 .footer {

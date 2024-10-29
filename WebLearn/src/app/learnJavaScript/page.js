@@ -206,19 +206,18 @@ document.getElementById('fetchButton').addEventListener('click', function() { <b
 &nbsp;&nbsp;&nbsp;&nbsp;.then(data => {<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(data); // Log the data to the console for debugging<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Display the data in the 'dataDisplay' div<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById('dataDisplay').innerHTML = "<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById('dataDisplay').innerHTML =  &#96;<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;Todo Item&lt;/h2&gt;<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Title: &#36;{data.title}&lt;/p&gt;<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Completed: &#36;{data.completed ? 'Yes' : 'No'}&lt;/p&gt;<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#96;;<br />
 &nbsp;&nbsp;&nbsp;&nbsp;})<br />
 &nbsp;&nbsp;&nbsp;&nbsp;.catch(error => {<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.error('Error fetching data:', error);<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById('dataDisplay').innerHTML = 'Error fetching data. Please try again later.';<br />
-&nbsp;&nbsp;&nbsp;&nbsp;});
+&nbsp;&nbsp;&nbsp;&nbsp;});<br />
 &nbsp;&nbsp;});
       </code></p>
-      <p>An important note for the JS code above is to use &#96;&#96; instead of "" .</p>
       <p>By using the Fetch API, you can retrieve data from external APIs and integrate it into your web applications. This allows you to create more dynamic and data-driven web applications that provide users with up-to-date information and functionality.</p>
     `,
   }
@@ -250,8 +249,8 @@ function Page() {
           <div className="container-fluid h-100 g-0">
             <div className="row h-100 g-0">
               <div className="col-2 navbar-bg">
-                <h1 className="mx-2 navbar-text">WebLearn</h1>
-                <h5 className="mx-2 navbar-text">Content Navigation</h5>
+              <h1 className="mx-2 navbar-text">WebLearn</h1>
+              <h2 className="mx-2 navbar-text fs-3">Content Navigation</h2>
                 <p>
                   <a
                     href="/instructLimits"

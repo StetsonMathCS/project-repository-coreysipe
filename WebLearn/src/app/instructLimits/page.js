@@ -14,7 +14,7 @@ function Page() {
           <div className="row h-100 g-0">
             <div className="col-2 navbar-bg">
               <h1 className="mx-2 navbar-text">WebLearn</h1>
-              <h5 className="mx-2 navbar-text">Content Navigation</h5>
+              <h2 className="mx-2 navbar-text fs-3">Content Navigation</h2>
               <p>
                 <a href="/#" className="btn btn-secondary d-block mx-2 py-1">
                   Instructions & Limitations
@@ -50,7 +50,8 @@ function Page() {
                 </a>
               </p>
             </div>
-            <div className="px-2 display-border-light pt-1 col-10 h-100 overflow-auto">
+            <div className="p-5 text-fixing col-10 h-100 overflow-auto">
+              <h3 className="center">Instructions & Limitations</h3>
               <p>
                 WebLearn is an educational platform designed to help you learn
                 how to use HTML, CSS & JavaScript (JS). It teaches you by

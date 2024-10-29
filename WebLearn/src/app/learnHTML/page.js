@@ -260,8 +260,8 @@ function Page() {
           <div className="container-fluid h-100 g-0">
             <div className="row h-100 g-0">
               <div className="col-2 navbar-bg">
-                <h1 className="mx-2">WebLearn</h1>
-                <h2 className="mx-2">Practice Modes</h2>
+              <h1 className="mx-2 navbar-text">WebLearn</h1>
+              <h2 className="mx-2 navbar-text fs-3">Content Navigation</h2>
                 <p>
                   <a
                     href="/htmlEditor"
