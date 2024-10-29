@@ -186,6 +186,69 @@ body {
 // Add your JavaScript code here to rotate the triangle
     `,
   },
+  {
+    id: 6,
+    title: "Event Listeners & Handling",
+    complexity: "Complexity: ★★★☆☆",
+    description:
+      "Create a button that changes its text when clicked. Use HTML for the button structure, CSS for initial styling, and JavaScript to handle the click event.",
+    hint: "Use the <button> tag to create the button. You can use the addEventListener method in JavaScript to handle the click event.",
+    initialHtml: `
+  <!DOCTYPE html>
+  <html>
+  <head>
+      <title>Event Listeners</title>
+  </head>
+  <body>
+      <button id="changeTextButton">Click me</button>
+  </body>
+  </html>
+    `,
+    initialCss: `
+  /* Add your CSS styles here */
+  button {
+      padding: 10px 20px;
+      font-size: 16px;
+  }
+    `,
+    initialJs: `
+  // Add your JavaScript code here to handle the button click event
+    `,
+  },
+  {
+    id: 7,
+    title: "Utilizing Fetch for APIs",
+    complexity: "Complexity: ★★★★★",
+    description:
+      "Create a button that fetches data from a public API and displays it on the page when clicked. Use HTML for the button structure, CSS for initial styling, and JavaScript to handle the API request.",
+    hint: "Use the fetch function in JavaScript to make the API request. You can use the .then() method to handle the response and .catch() to handle any errors. Use the link from the example code for this section to fetch data from.",
+    initialHtml: `
+  <!DOCTYPE html>
+  <html>
+  <head>
+      <title>Fetch API</title>
+  </head>
+  <body>
+      <button id="fetchDataButton">Fetch Data</button>
+      <div id="dataDisplay"></div>
+  </body>
+  </html>
+    `,
+    initialCss: `
+  /* Add your CSS styles here */
+  button {
+      padding: 10px 20px;
+      font-size: 16px;
+  }
+  #dataDisplay {
+      margin-top: 20px;
+      font-size: 14px;
+  }
+    `,
+    initialJs: `
+  // Add your JavaScript code here to fetch data from the API and display it
+    `,
+  }
 ];
 
 function Page() {

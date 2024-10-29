@@ -160,6 +160,68 @@ const sections = [
 
     `,
   },
+  {
+    id: 6,
+    title: "Event Listeners and Event Handling",
+    content: `
+      <p>Event listeners and event handling are fundamental concepts in JavaScript that allow you to respond to user interactions and other events on a web page. By using event listeners, you can execute specific code when an event occurs, such as a button click, a form submission, or a mouse movement.</p>
+      <p>Here is an example of how you can use an event listener to handle a button click event:</p>
+      <p>Here is the HTML code for the button:</p>
+      <p><code>&lt;button id="myButton"&gt;Click Me&lt;/button&gt;</code></p>
+      <p>Here is the JS code that goes with the button:</p>
+      <p><code>
+      document.getElementById('myButton').addEventListener('click', function() {<br>
+        &nbsp;&nbsp;alert('Button was clicked!');<br>
+      });
+      </code></p>
+      <p>Event listeners are a powerful tool for creating interactive and dynamic web pages. By using event listeners, you can respond to user interactions and other events, and execute specific code to enhance the user experience of your website.</p>
+    `,
+  },
+  {
+    id: 7,
+    title: "Working with APIs and Fetch",
+    content: `
+      <p>APIs (Application Programming Interfaces) allow you to interact with external services and retrieve data from them. By using APIs, you can integrate external data and functionality into your web applications, such as weather information, social media feeds, and more.</p>
+      <p>Here is an example of how you can use the Fetch API to retrieve data from an external API:</p>
+      <p>Here is the HTML code for the button that fetches data:</p>
+      <p><code>
+&lt;!DOCTYPE html&gt; <br />
+&lt;html lang="en"&gt;<br />
+&nbsp;&nbsp;&lt;head&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset="UTF-8"&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Fetch API Example&lt;/title&gt;<br />
+&nbsp;&nbsp;&lt;/head&gt;<br />
+&nbsp;&nbsp;&lt;body&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;button id="fetchButton"&gt;Fetch Data&lt;/button&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div id="dataDisplay"&gt;&lt;/div&gt;<br />
+&nbsp;&nbsp;&lt;/body&gt;<br />
+&lt;/html&gt;
+      </code></p>
+      <p>Here is the JS code that fetches data from an API:</p>
+      <p><code>
+document.getElementById('fetchButton').addEventListener('click', function() { <br />
+&nbsp;&nbsp;fetch('https://jsonplaceholder.typicode.com/todos/1')<br />
+&nbsp;&nbsp;&nbsp;&nbsp;.then(response => response.json())<br />
+&nbsp;&nbsp;&nbsp;&nbsp;.then(data => {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(data); // Log the data to the console for debugging<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Display the data in the 'dataDisplay' div<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById('dataDisplay').innerHTML = "<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;Todo Item&lt;/h2&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Title: &#36;{data.title}&lt;/p&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Completed: &#36;{data.completed ? 'Yes' : 'No'}&lt;/p&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";<br />
+&nbsp;&nbsp;&nbsp;&nbsp;})<br />
+&nbsp;&nbsp;&nbsp;&nbsp;.catch(error => {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.error('Error fetching data:', error);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById('dataDisplay').innerHTML = 'Error fetching data. Please try again later.';<br />
+&nbsp;&nbsp;&nbsp;&nbsp;});
+&nbsp;&nbsp;});
+      </code></p>
+      <p>An important note for the JS code above is to use &#96;&#96; instead of "" .</p>
+      <p>By using the Fetch API, you can retrieve data from external APIs and integrate it into your web applications. This allows you to create more dynamic and data-driven web applications that provide users with up-to-date information and functionality.</p>
+    `,
+  }
   // Add more sections as needed
 ];
 
