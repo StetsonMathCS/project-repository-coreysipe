@@ -166,6 +166,72 @@ const sections = [
     <p> The class and id attributes are used to apply CSS styles to specific elements on a webpage. The class attribute is used to apply a style to multiple elements, while the id attribute is used to apply a style to a single element. By using classes and ids, you can target specific elements and apply custom styles to them, such as colors, fonts, margins, padding, and more. This allows you to create consistent and cohesive designs across your webpage and maintain a clean and organized code structure. </p>
     `,
   },
+  {
+    id: 6,
+    title: "Semantic HTML",
+    content: `
+      <p>Semantic HTML refers to the use of HTML tags that convey the meaning of the content within them. These tags help search engines and other user devices determine the importance and context of web content. Using semantic HTML improves the accessibility and SEO of your web pages.</p>
+      <p>Here are some common semantic HTML tags and their uses:</p>
+      <ul>
+        <li><code>&lt;header&gt;</code>: Represents the introductory content or a set of navigational links.</li>
+        <li><code>&lt;nav&gt;</code>: Contains the navigation links for the website.</li>
+        <li><code>&lt;main&gt;</code>: Specifies the main content of the document, unique to the document.</li>
+        <li><code>&lt;section&gt;</code>: Defines a section in a document, such as chapters, headers, footers, or any other sections of the document.</li>
+        <li><code>&lt;article&gt;</code>: Represents a self-contained piece of content that could be distributed independently, such as a blog post or news article.</li>
+        <li><code>&lt;aside&gt;</code>: Contains content that is tangentially related to the content around it, such as sidebars or call-out boxes.</li>
+        <li><code>&lt;footer&gt;</code>: Represents the footer for its nearest sectioning content or sectioning root element.</li>
+       </ul>
+       <p>Here is an example of a simple webpage structure using semantic HTML:</p>
+      <p>
+      <code>        &lt;header&gt;<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;My Website&lt;/h1&gt;<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&lt;nav&gt;<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&gt;<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&lt;/nav&gt;<br>
+      &lt;/header&gt;<br>
+      &lt;main&gt;<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&lt;article&gt;<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;Welcome to My Website&lt;/h2&gt;<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;This is a sample article.&lt;/p&gt;<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&lt;/article&gt;<br>
+      &lt;/main&gt;<br>
+      &lt;aside&gt;<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;This is an aside section.&lt;/p&gt;<br>
+      &lt;/aside&gt;<br>
+      &lt;footer&gt;<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Footer content goes here.&lt;/p&gt;<br>
+      &lt;/footer&gt;<br>
+      </code>
+      </p>
+      <p>Using semantic HTML tags helps create a more meaningful and accessible web experience for all users.</p>
+      `,
+  },
+  {
+    id: 7,
+    title: "ADA and Accessibility",
+    content: `
+      <p>Web accessibility refers to the inclusive practice of ensuring there are no barriers that prevent interaction with, or access to, websites on the World Wide Web by people with physical disabilities, situational disabilities, and socio-economic restrictions on bandwidth and speed. When sites are correctly designed, developed, and edited, all users have equal access to information and functionality.</p>
+      <p>The Americans with Disabilities Act (ADA) is a law that requires web content to be accessible to people with disabilities. Here are some key points to consider for making your website ADA compliant:</p>
+      <ul>
+        <li><strong>Use Semantic HTML:</strong> Semantic HTML tags like <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, and <code>&lt;footer&gt;</code> help screen readers understand the structure of your content.</li>
+        <li><strong>Provide Text Alternatives:</strong> Use the <code>alt</code> attribute for images to provide text descriptions. This helps screen readers convey the content of images to users who cannot see them.</li>
+        <li><strong>Ensure Keyboard Accessibility:</strong> Make sure all interactive elements (links, buttons, forms) can be navigated and operated using a keyboard.</li>
+        <li><strong>Use ARIA Roles and Attributes:</strong> ARIA (Accessible Rich Internet Applications) roles and attributes can help make dynamic content more accessible. For example, use <code>role="button"</code> for elements that act like buttons but are not <code>&lt;button&gt;</code> elements.</li>
+        <li><strong>Provide Sufficient Contrast:</strong> Ensure that text has sufficient contrast against its background to be readable by users with visual impairments. Use tools like the WebAIM Contrast Checker to verify contrast ratios.</li>
+        <li><strong>Use Descriptive Link Text:</strong> Avoid using "click here" or "read more" for link text. Instead, use descriptive text that conveys the purpose of the link, such as "Read our accessibility guidelines."</li>
+        <li><strong>Ensure Form Accessibility:</strong> Use <code>&lt;label&gt;</code> elements to associate labels with form controls. This helps screen readers convey the purpose of form fields to users.</li>
+        <li><strong>Provide Captions and Transcripts:</strong> For multimedia content like videos, provide captions and transcripts to make the content accessible to users with hearing impairments.</li>
+      </ul>
+      <p>Here is an example of an accessible image tag:</p>
+      <p><code>&lt;img src="example.jpg" alt="Description of the image"&gt;</code></p>
+      <p>By following these guidelines, you can create a more inclusive and accessible web experience for all users.</p>
+    `,
+  }
+  
   // Add more sections as needed
 ];
 
@@ -194,16 +260,8 @@ function Page() {
           <div className="container-fluid h-100 g-0">
             <div className="row h-100 g-0">
               <div className="col-2 navbar-bg">
-                <h1 className="mx-2 navbar-text">WebLearn</h1>
-                <h5 className="mx-2 navbar-text">Content Navigation</h5>
-                <p>
-                  <a
-                    href="/instructLimits"
-                    className="btn btn-secondary d-block mx-2 py-1"
-                  >
-                    Instructions & Limitations
-                  </a>
-                </p>
+                <h1 className="mx-2">WebLearn</h1>
+                <h2 className="mx-2">Practice Modes</h2>
                 <p>
                   <a
                     href="/htmlEditor"
@@ -234,12 +292,12 @@ function Page() {
                   </a>
                 </p>
               </div>
-              <div className="px-2 display-border-light pt-1 col-8 h-100 overflow-auto">
+              <div className=" px-2 pt-1 col-8 h-100 overflow-auto">
                 <div
                   dangerouslySetInnerHTML={{ __html: currentSection.content }}
                 />
               </div>
-              <div className="col-2 display-border-light">
+              <div className="col-2">
                 <div className="challenges-container mx-2 mt-auto">
                   <div className="mt-2 challenges-navigation">
                     <button
@@ -283,10 +341,7 @@ function Page() {
         <footer className="footer">
           <p className="m-0 py-3">
             Designed & Developed by Corey Sipe. Have a suggestion or critique?
-            <a target="_blank" href="https://forms.gle/vAMBqqHPxnH7eX4Q8">
-              {" "}
-              Fill out a feedback form!{" "}
-            </a>
+            <a href="#"> Fill out a feedback form! </a>
             Just because the code can run doesn't mean it is the right way to do
             something.
           </p>

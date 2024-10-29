@@ -17,12 +17,12 @@ const challenges = [
     initialHtml: `
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Header Sizing Practice</title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Add your headers and paragraphs here -->
-</body>
+  </body>
 </html>
     `,
   },
@@ -36,13 +36,13 @@ const challenges = [
     initialHtml: `
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Favorite Movies</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>My Favorite Movies</h1>
     <!-- Add your movie list here -->
-</body>
+  </body>
 </html>
     `,
   },
@@ -57,10 +57,10 @@ const challenges = [
 <!DOCTYPE html>
 <html>
   <head>
-      <title>Iframe Challenge</title>
+    <title>Iframe Challenge</title>
   </head>
   <body>
-      <!-- Add your iframes here -->
+    <!-- Add your iframes here -->
   </body>
 </html>
     `,
@@ -75,12 +75,12 @@ const challenges = [
     initialHtml: `
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Calendar and Login Form</title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Add your calendar and login form here -->
-</body>
+  </body>
 </html>
     `,
   },
@@ -94,15 +94,53 @@ const challenges = [
     initialHtml: `
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Inline Styling Div</title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Add your styled div here -->
-</body>
+  </body>
 </html>
     `,
   },
+  {
+    id: 6,
+    title: "Semantic HTML Challenge",
+    complexity: "Complexity:  ★★★☆☆",
+    description:
+      "Create an HTML page using semantic HTML5 elements. The page should include a header, main content area, and a footer. The main content area should have an article and a section.",
+    hint: "Use the <header>, <main>, <footer>, <article>, and <section> tags to structure your page.",
+    initialHtml: `
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Semantic HTML Challenge</title>
+  </head>
+  <body>
+    <!-- Add your semantic HTML elements here -->
+  </body>
+</html>
+    `,
+    },
+    {
+    id: 7,
+    title: "ADA Compliant Page Challenge",
+    complexity: "Complexity:  ★★☆☆☆",
+    description:
+      "Create an HTML page that is ADA compliant. The page should include proper use of ARIA roles, labels for form elements, and ensure that all interactive elements are accessible via keyboard.",
+    hint: "Use ARIA roles and attributes like role, aria-label, and aria-labelledby. Ensure form elements have associated labels and all interactive elements can be accessed using the keyboard.",
+    initialHtml: `
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ADA Compliant Page</title>
+  </head>
+  <body>
+      <!-- Add your ADA compliant elements here -->
+  </body>
+</html>
+    `,
+    }
 ];
 
 function Page() {
