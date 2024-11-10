@@ -1,29 +1,27 @@
 "use client";
 import React from "react";
 import Layout from "../layout.js";
-import CodeEditor from "../components/codePlaygroundMd.tsx";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles.css";
 
 function Page() {
   return (
     <Layout>
-      <title>WebLearn Instructions & Limits</title>
+      <title>WebLearn Instructions</title>
       <main className="vh-90">
         <div className="container-fluid h-100 g-0">
           <div className="row h-100 g-0">
             <div className="col-2 navbar-bg">
-              <h1 className="mx-2 navbar-text">WebLearn</h1>
-              <h2 className="mx-2 navbar-text fs-3">Content Navigation</h2>
+              <h2 className="mx-2 navbar-text fs-3">Web Learn</h2>
               <p>
-                <a href="/#" className="btn btn-secondary d-block mx-2 py-1">
-                  Instructions & Limitations
+                <a href="/#" className="btn btncolor d-block mx-2 py-1">
+                  Instructions
                 </a>
               </p>
               <p>
                 <a
                   href="/htmlEditor"
-                  className="btn btn-secondary d-block mx-2 py-1"
+                  className="btn btncolor d-block mx-2 py-1"
                 >
                   HTML
                 </a>
@@ -31,27 +29,27 @@ function Page() {
               <p>
                 <a
                   href="/htmlCssEditor"
-                  className="btn btn-secondary d-block mx-2 py-1"
+                  className="btn btncolor d-block mx-2 py-1"
                 >
-                  HTML & CSS
+                  HTML + CSS
                 </a>
               </p>
               <p>
-                <a href="../" className="btn btn-secondary d-block mx-2 py-1">
-                  HTML, CSS & JavaScript
+                <a href="../" className="btn btncolor d-block mx-2 py-1">
+                  HTML + CSS + JS
                 </a>
               </p>
               <p>
                 <a
                   href="/education"
-                  className="btn btn-secondary d-block mx-2 py-1"
+                  className="btn btncolor d-block mx-2 py-1"
                 >
-                  Educational Content
+                  Tutorials
                 </a>
               </p>
             </div>
             <div className="p-5 text-fixing col-10 h-100 overflow-auto">
-              <h3 className="center">Instructions & Limitations</h3>
+              <h1 className="center">Instructions and Limitations</h1>
               <p>
                 WebLearn is an educational platform designed to help you learn
                 how to use HTML, CSS & JavaScript (JS). It teaches you by

@@ -8,25 +8,21 @@ import "../styles.css";
 function Page() {
   return (
     <Layout>
-      <title>WebLearn Education Content</title>
+      <title>Web Learn Tutorials</title>
       <main className="vh-90">
         <div className="container-fluid h-100 g-0">
           <div className="row h-100 g-0">
             <div className="col-2 navbar-bg">
-            <h1 className="mx-2 navbar-text">WebLearn</h1>
-            <h2 className="mx-2 navbar-text fs-3">Content Navigation</h2>
+            <h2 className="mx-2 navbar-text fs-3">Web Learn</h2>
               <p>
-                <a
-                  href="/instructLimits"
-                  className="btn btn-secondary d-block mx-2 py-1"
-                >
-                  Instructions & Limitations
+                <a href="/instructLimits" className="btn btncolor d-block mx-2 py-1">
+                  Instructions
                 </a>
               </p>
               <p>
                 <a
                   href="/htmlEditor"
-                  className="btn btn-secondary d-block mx-2 py-1"
+                  className="btn btncolor d-block mx-2 py-1"
                 >
                   HTML
                 </a>
@@ -34,22 +30,22 @@ function Page() {
               <p>
                 <a
                   href="/htmlCssEditor"
-                  className="btn btn-secondary d-block mx-2 py-1"
+                  className="btn btncolor d-block mx-2 py-1"
                 >
-                  HTML & CSS
+                  HTML + CSS
                 </a>
               </p>
               <p>
-                <a href="../" className="btn btn-secondary d-block mx-2 py-1">
-                  HTML, CSS & JavaScript
+                <a href="../" className="btn btncolor d-block mx-2 py-1">
+                  HTML + CSS + JS
                 </a>
               </p>
               <p>
                 <a
-                  href="/education"
-                  className="btn btn-secondary d-block mx-2 py-1"
+                  href="#"
+                  className="btn btncolor d-block mx-2 py-1"
                 >
-                  Educational Content
+                  Tutorials
                 </a>
               </p>
             </div>
@@ -77,7 +73,7 @@ function Page() {
                 &lt;img&gt; for images, &lt;a&gt; for links, and &lt;div&gt; for
                 divisions or sections.
               </p>
-              <a href="/learnHTML" className="btn btn-secondary py-1">
+              <a href="/learnHTML" className="btn btncolor py-1">
                 Learn HTML
               </a>
             </div>
@@ -96,7 +92,7 @@ function Page() {
                 also use CSS to create layouts, animations, and responsive
                 designs.
               </p>
-              <a href="/learnCSS" className="btn btn-secondary py-1">
+              <a href="/learnCSS" className="btn btncolor py-1">
                 Learn CSS
               </a>
             </div>
@@ -113,7 +109,7 @@ function Page() {
                 ecosystem of libraries and frameworks that make web development
                 easier and more efficient.
               </p>
-              <a href="/learnJavaScript" className="btn btn-secondary py-1">
+              <a href="/learnJavaScript" className="btn btncolor py-1">
                 Learn JavaScript
               </a>
             </div>

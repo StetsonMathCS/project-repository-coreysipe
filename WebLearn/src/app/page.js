@@ -322,67 +322,63 @@ function Page() {
           <div className="row h-100 g-0">
             <div className="col-2 navbar-bg d-flex flex-column">
               <div>
-              <h1 className="mx-2 navbar-text">Web Learn</h1>
-              <h2 className="mx-2 navbar-text fs-3">Content Navigation</h2>
-                <p>
-                  <a
-                    href="/instructLimits"
-                    className="btn btn-secondary d-block mx-2 py-1"
-                  >
-                    Instructions & Limitations
-                  </a>
-                </p>
-                <p>
-                  <a
-                    href="/htmlEditor"
-                    className="btn btn-secondary d-block mx-2 py-1"
-                  >
-                    HTML
-                  </a>
-                </p>
-                <p>
-                  <a
-                    href="/htmlCssEditor"
-                    className="btn btn-secondary d-block mx-2 py-1"
-                  >
-                    HTML & CSS
-                  </a>
-                </p>
-                <p>
-                  <a href="#" className="btn btn-secondary d-block mx-2 py-1">
-                    HTML, CSS & JavaScript
-                  </a>
-                </p>
-                <p>
-                  <a
-                    href="/education"
-                    className="btn btn-secondary d-block mx-2 py-1"
-                  >
-                    Educational Content
-                  </a>
-                </p>
+              <h2 className="mx-2 navbar-text fs-3">Web Learn</h2>
+              <p>
+                <a href="/instructLimits" className="btn btncolor d-block mx-2 py-1">
+                  Instructions
+                </a>
+              </p>
+              <p>
+                <a
+                  href="/htmlEditor"
+                  className="btn btncolor d-block mx-2 py-1"
+                >
+                  HTML
+                </a>
+              </p>
+              <p>
+                <a
+                  href="/htmlCssEditor"
+                  className="btn btncolor d-block mx-2 py-1"
+                >
+                  HTML + CSS
+                </a>
+              </p>
+              <p>
+                <a href="#" className="btn btncolor d-block mx-2 py-1">
+                  HTML + CSS + JS
+                </a>
+              </p>
+              <p>
+                <a
+                  href="/education"
+                  className="btn btncolor d-block mx-2 py-1"
+                >
+                  Education
+                </a>
+              </p>
               </div>
               <div
                 className="challenges-container mx-2 flex-grow-1 d-flex flex-column"
                 ref={challengesContainerRef}
-              >
-                <div className="challenges-navigation">
-                  <button
-                    onClick={handlePrevChallenge}
-                    className="btn btn-secondary me-2"
-                  >
-                    <ChevronLeft size={20} />
-                  </button>
-                  <button
-                    onClick={handleNextChallenge}
-                    className="btn btn-secondary"
-                  >
-                    <ChevronRight size={20} />
-                  </button>
-                </div>
+              >  
                 <div className="navbar-text overflow-auto">
-                  <h3>Challenge #{currentChallenge.id}:</h3>
+                  <div className="d-flex align-items-center justify-content-center">
+                    <button
+                      onClick={handlePrevChallenge}
+                      className="btn btncolor me-2"
+                    >
+                      <ChevronLeft size={20} />
+                    </button>
+                    <button
+                      onClick={handleNextChallenge}
+                      className="btn btncolor ms-2"
+                    >
+                      <ChevronRight size={20} />
+                    </button>
+                  </div>
                   <div className="flex-grow-1">
+                  <h3 className="flex-grow-1 text-center">Challenge #{currentChallenge.id}:</h3>
                     <p>{currentChallenge.complexity}</p>
                     <p>{currentChallenge.description}</p>
                     <h4>Hint:</h4>
@@ -391,7 +387,7 @@ function Page() {
                 </div>
                 <p className="mt-2">
                   <button
-                    className="btn btn-secondary py-1 d-block w-100"
+                    className="btn btncode py-1 d-block w-100"
                     onClick={handleRunCode}
                   >
                     Run Code

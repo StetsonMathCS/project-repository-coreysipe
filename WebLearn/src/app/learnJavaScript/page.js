@@ -249,45 +249,41 @@ function Page() {
           <div className="container-fluid h-100 g-0">
             <div className="row h-100 g-0">
               <div className="col-2 navbar-bg">
-              <h1 className="mx-2 navbar-text">WebLearn</h1>
-              <h2 className="mx-2 navbar-text fs-3">Content Navigation</h2>
-                <p>
-                  <a
-                    href="/instructLimits"
-                    className="btn btn-secondary d-block mx-2 py-1"
-                  >
-                    Instructions & Limitations
-                  </a>
-                </p>
-                <p>
-                  <a
-                    href="/htmlEditor"
-                    className="btn btn-secondary d-block mx-2 py-1"
-                  >
-                    HTML
-                  </a>
-                </p>
-                <p>
-                  <a
-                    href="/htmlCssEditor"
-                    className="btn btn-secondary d-block mx-2 py-1"
-                  >
-                    HTML & CSS
-                  </a>
-                </p>
-                <p>
-                  <a href="../" className="btn btn-secondary d-block mx-2 py-1">
-                    HTML, CSS & JavaScript
-                  </a>
-                </p>
-                <p>
-                  <a
-                    href="/education"
-                    className="btn btn-secondary d-block mx-2 py-1"
-                  >
-                    Educational Content
-                  </a>
-                </p>
+              <h2 className="mx-2 navbar-text fs-3">Web Learn</h2>
+              <p>
+                <a href="/instructLimits" className="btn btncolor d-block mx-2 py-1">
+                  Instructions
+                </a>
+              </p>
+              <p>
+                <a
+                  href="/htmlEditor"
+                  className="btn btncolor d-block mx-2 py-1"
+                >
+                  HTML
+                </a>
+              </p>
+              <p>
+                <a
+                  href="/htmlCssEditor"
+                  className="btn btncolor d-block mx-2 py-1"
+                >
+                  HTML + CSS
+                </a>
+              </p>
+              <p>
+                <a href="../" className="btn btncolor d-block mx-2 py-1">
+                  HTML + CSS + JS
+                </a>
+              </p>
+              <p>
+                <a
+                  href="/education"
+                  className="btn btncolor d-block mx-2 py-1"
+                >
+                  Tutorials
+                </a>
+              </p>
               </div>
               <div className="px-2 pt-1 display-border-light col-8 h-100 overflow-auto">
                 <div
@@ -299,13 +295,13 @@ function Page() {
                   <div className="challenges-navigation">
                     <button
                       onClick={handlePrevSection}
-                      className="btn btn-secondary me-2"
+                      className="btn btncolor me-2"
                     >
                       <ChevronLeft size={20} />
                     </button>
                     <button
                       onClick={handleNextSection}
-                      className="btn btn-secondary"
+                      className="btn btncolor"
                     >
                       <ChevronRight size={20} />
                     </button>
