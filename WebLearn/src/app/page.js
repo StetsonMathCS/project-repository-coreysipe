@@ -354,7 +354,7 @@ function Page() {
                   href="/education"
                   className="btn btncolor d-block mx-2 py-1"
                 >
-                  Education
+                  Tutorials
                 </a>
               </p>
               </div>
