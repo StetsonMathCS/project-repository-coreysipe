@@ -334,7 +334,7 @@ function Page() {
                   </p>
                 </div>
               </div>
-              <div className="display-border-light px-2 pt-1 col-8 h-100 overflow-auto">
+              <div className="display-border-light px-5 pt-4 col-8 h-100 overflow-auto">
                 <div
                   dangerouslySetInnerHTML={{ __html: currentSection.content }}
                 />
