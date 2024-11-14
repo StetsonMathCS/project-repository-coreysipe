@@ -221,11 +221,6 @@ function Page() {
                 </a>
               </p>
               </div>
-              <div className="px-2 pt-1 col-8 h-100 display-border-light overflow-auto">
-                <div
-                  dangerouslySetInnerHTML={{ __html: currentSection.content }}
-                />
-              </div>
               <div className="col-2 pt-1 display-border-light">
                 <div className="challenges-container mx-2 mt-auto">
                   <div className="challenges-navigation">
@@ -265,6 +260,12 @@ function Page() {
                   </p>
                 </div>
               </div>
+              <div className="px-2 pt-1 col-8 h-100 display-border-light overflow-auto">
+                <div
+                  dangerouslySetInnerHTML={{ __html: currentSection.content }}
+                />
+              </div>
+              
             </div>
           </div>
         </main>

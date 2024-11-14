@@ -243,11 +243,12 @@ function Page() {
                   Tutorials
                 </a>
               </p>
-                <div
-                  className="challenges-container mx-2 flex-grow-1 d-flex flex-column"
-                  ref={challengesContainerRef}
-                >
-                  <div className="challenges-navigation">
+              <div
+                className="challenges-container mx-2 flex-grow-1 d-flex flex-column"
+                ref={challengesContainerRef}
+              >  
+                <div className="navbar-text overflow-auto">
+                  <div className="d-flex align-items-center justify-content-center">
                     <button
                       onClick={handlePrevChallenge}
                       className="btn btncolor me-2"
@@ -256,20 +257,19 @@ function Page() {
                     </button>
                     <button
                       onClick={handleNextChallenge}
-                      className="btn btncolor"
+                      className="btn btncolor ms-2"
                     >
                       <ChevronRight size={20} />
                     </button>
                   </div>
-                  <div className="navbar-text overflow-auto">
-                    <h3>Challenge #{currentChallenge.id}:</h3>
-                    <div className="flex-grow-1">
-                      <p>{currentChallenge.complexity}</p>
-                      <p>{currentChallenge.description}</p>
-                      <h4>Hint:</h4>
-                      <p>{currentChallenge.hint}</p>
-                    </div>
+                  <div className="flex-grow-1">
+                  <h3 className="flex-grow-1 text-center">Challenge #{currentChallenge.id}:</h3>
+                    <p>{currentChallenge.complexity}</p>
+                    <p>{currentChallenge.description}</p>
+                    <h4>Hint:</h4>
+                    <p>{currentChallenge.hint}</p>
                   </div>
+                </div>
                   <p className="mt-2">
                     <button
                       className="btn btncode py-1 d-block w-100"
